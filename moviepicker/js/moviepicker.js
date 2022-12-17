@@ -1,7 +1,7 @@
 const movies = [
 	"Game of thrones", 
 	"Mentalista", 
-	"Mentirosas", 
+	"Mentirosas nueva", 
 	"Chernovyl", 
 	"Fringe", 
 	"Evangelion", 
@@ -18,8 +18,7 @@ const movies = [
 	"Priosion break", 
 	"Mentes criminales", 
 	"Ad Astra", 
-	"Inquebrantable", 
-	"Plan de vuelo", 
+	"Inquebrantable",
 	"El dia qué la tierra se detuvo", 
 	"Bárbaro", 
 	"Una navidad de locos", 
@@ -30,8 +29,7 @@ const movies = [
 	"Titanes del pacifico", 
 	"Grinch", 
 	"Documental de juan pa", 
-	"Bojack", 
-	"La princesa mononoke", 
+	"Bojack",
 	"Baby", 
 	"Desencanto", 
 	"Dark", 
@@ -59,7 +57,7 @@ const movies = [
 	"365 días", 
 	"RRR", 
 	"El puente maldito", 
-	"Residen evil", 
+	"Resident evil", 
 	"Fractura"]
 
 const random = Math.floor(Math.random() * movies.length)
