@@ -39,7 +39,7 @@ const movies = [
 	"Ponyo", 
 	"Mi vecino totoro", 
 	"El castillo en el cielo", 
-	"Fractura"
+	"Fractura",
 	"La quinta ola",
 	"La noche del demonio", 
 	"Mapaches", 
