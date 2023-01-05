@@ -62,7 +62,9 @@ const movies = [
 	"Coda",
 	"Children of men",
 	"Mr pickles",
-	"Aun se lo que hicieron el verano pasado"]
+	"Aun se lo que hicieron el verano pasado",
+	"Emily in Paris",
+	"La chica salvaje"]
 
 const random = Math.floor(Math.random() * movies.length)
 
