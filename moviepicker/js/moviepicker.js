@@ -8,7 +8,7 @@ const movies = [
 	"Señor de los anillos extendida", 
 	"Merlina", 
 	"El padrino", 
-	"Terminator", 
+	"Terminator 2", 
 	"Saw", 
 	"La maldición", 
 	"Piratas del caribe", 
@@ -63,8 +63,7 @@ const movies = [
 	"Children of men",
 	"Mr pickles",
 	"Aun se lo que hicieron el verano pasado",
-	"Emily in Paris",
-	"La chica salvaje"]
+	"Emily in Paris"]
 
 const random = Math.floor(Math.random() * movies.length)
 
