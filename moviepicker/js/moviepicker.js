@@ -41,7 +41,7 @@ const movies = [
 	"El castillo en el cielo", 
 	"Fractura",
 	"La quinta ola",
-	"La noche del demonio", 
+	"La noche del demonio 2", 
 	"Mapaches", 
 	"Se levanta el viento",
 	"The simpsons",
@@ -49,7 +49,6 @@ const movies = [
 	"El puente maldito", 
 	"Resident evil",
 	"Kiki entregas a domicilio",
-	"Mitchell vs machines",
 	"La colina de las amapolas",
 	"Puedo escuchar el mar",
 	"Porco Rosso",
@@ -63,7 +62,8 @@ const movies = [
 	"Children of men",
 	"Mr pickles",
 	"Aun se lo que hicieron el verano pasado",
-	"Emily in Paris"]
+	"Emily in Paris",
+	"You"]
 
 const random = Math.floor(Math.random() * movies.length)
 
