@@ -27,7 +27,6 @@ const movies = [
 	"Titanes del pacifico",
 	"Documental de juan pa", 
 	"Bojack",
-	"Baby", 
 	"Desencanto simpsons", 
 	"Dark", 
 	"Encantada y desencantada", 
@@ -42,8 +41,7 @@ const movies = [
 	"Fractura",
 	"La quinta ola",
 	"La noche del demonio 2", 
-	"Mapaches", 
-	"Se levanta el viento",
+	"Mapaches",
 	"The simpsons",
 	"RRR", 
 	"El puente maldito", 
@@ -59,11 +57,12 @@ const movies = [
 	"The happening",
 	"28 weeks",
 	"Coda",
-	"Children of men",
 	"Mr pickles",
 	"Aun se lo que hicieron el verano pasado",
 	"Emily in Paris",
-	"You"]
+	"You",
+	"The Last of Us",
+	"Triunfos robados 3"]
 
 const random = Math.floor(Math.random() * movies.length)
 
