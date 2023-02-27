@@ -39,7 +39,7 @@ const movies = [
 	"Mapaches",
 	"The simpsons",
 	"RRR",
-	"Resident evil 2",
+	"Resident evil 3",
 	"Kiki entregas a domicilio",
 	"La colina de las amapolas",
 	"Porco Rosso",
