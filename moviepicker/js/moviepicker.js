@@ -55,7 +55,8 @@ const movies = [
 	"Titanic",
 	"Troya",
 	"Entrevista a un vampiro",
-	"Novia de Chuky"]
+	"Novia de Chuky",
+	"The Unbearable Weight of Massive Talent"]
 
 const random = Math.floor(Math.random() * movies.length)
 
