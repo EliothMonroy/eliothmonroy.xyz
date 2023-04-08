@@ -26,7 +26,7 @@ const movies = [
 	"Bojack",
 	"Desencanto simpsons", 
 	"Dark", 
-	"Encantada y desencantada", 
+	"Desencantada", 
 	"Libranos del mal",
 	"Susurros del corazón",
 	"Nausicaa", 
@@ -41,7 +41,6 @@ const movies = [
 	"Resident evil 3",
 	"Kiki entregas a domicilio",
 	"La colina de las amapolas",
-	"Porco Rosso",
 	"Cuentos de terramar",
 	"Just married",
 	"A cure for wellness",
@@ -56,7 +55,19 @@ const movies = [
 	"Troya",
 	"Entrevista a un vampiro",
 	"Novia de Chuky",
-	"The Unbearable Weight of Massive Talent"]
+	"The Unbearable Weight of Massive Talent",
+	"Get Smart",
+	"Demonic",
+	"Scare Me",
+	"The Invitation",
+	"All quiet in the north front",
+	"You don't mess with Zohan",
+	"Bullet Train",
+	"A Star is born",
+	"The calm beyond",
+	"Liar Liar",
+	"Al diablo con el diablo",
+	"Dunkirk"]
 
 const random = Math.floor(Math.random() * movies.length)
 
