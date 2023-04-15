@@ -64,9 +64,7 @@ const movies = [
 	"A Star is born",
 	"The calm beyond",
 	"Liar Liar",
-	"Al diablo con el diablo",
-	"Dunkirk",
-	"Emergencia en el aire"]
+	"Dunkirk"]
 
 const random = Math.floor(Math.random() * movies.length)
 
