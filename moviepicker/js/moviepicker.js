@@ -22,12 +22,10 @@ const movies = [
 	"Crimen perfecto", 
 	"Evolution", 
 	"Titanes del pacifico",
-	"Documental de juan pa", 
 	"Bojack",
 	"Desencanto simpsons", 
 	"Dark", 
-	"Desencantada", 
-	"Libranos del mal",
+	"Desencantada",
 	"Susurros del corazón",
 	"Nausicaa", 
 	"Arriety", 
@@ -64,7 +62,8 @@ const movies = [
 	"A Star is born",
 	"The calm beyond",
 	"Liar Liar",
-	"Dunkirk"]
+	"Dunkirk",
+	"Bajo la misma estrella"]
 
 const random = Math.floor(Math.random() * movies.length)
 
