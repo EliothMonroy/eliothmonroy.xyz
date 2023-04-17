@@ -8,7 +8,7 @@ const movies = [
 	"Señor de los anillos extendida",
 	"El padrino", 
 	"Terminator 2", 
-	"Saw 2", 
+	"Saw 3", 
 	"La maldición", 
 	"Piratas del caribe",
 	"Código davinci",
