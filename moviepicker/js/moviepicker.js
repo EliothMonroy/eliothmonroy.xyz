@@ -62,7 +62,11 @@ const movies = [
 	"The calm beyond",
 	"Liar Liar",
 	"Dunkirk",
-	"Bajo la misma estrella"]
+	"Bajo la misma estrella",
+	"Aladin live action",
+	"El rey leon",
+	"Black Mirror",
+	"Tijuana"]
 
 const random = Math.floor(Math.random() * movies.length)
 
