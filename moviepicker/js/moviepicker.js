@@ -35,7 +35,7 @@ const movies = [
 	"Mapaches",
 	"The simpsons",
 	"RRR",
-	"Resident evil 3",
+	"Resident evil 4",
 	"Kiki entregas a domicilio",
 	"La colina de las amapolas",
 	"Cuentos de terramar",
@@ -66,7 +66,24 @@ const movies = [
 	"Aladin live action",
 	"El rey leon",
 	"Black Mirror",
-	"Tijuana"]
+	"Tijuana",
+	"Sucession",
+	"Fifty shades of grey",
+	"The inventor",
+	"Crush",
+	"Old",
+	"Malignant",
+	"Devil's child",
+	"3096 days",
+	"Código enigma",
+	"El huesped",
+	"Candy",
+	"End of days",
+	"La exorcista",
+	"El aro",
+	"Last seen alive",
+	"The unholy",
+	"Air"]
 
 const random = Math.floor(Math.random() * movies.length)
 
