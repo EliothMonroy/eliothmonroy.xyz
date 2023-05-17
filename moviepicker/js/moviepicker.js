@@ -75,7 +75,6 @@ const movies = [
 	"Malignant",
 	"Devil's child",
 	"3096 days",
-	"Código enigma",
 	"El huesped",
 	"Candy",
 	"End of days",
