@@ -67,7 +67,7 @@ const movies = [
 	"Black Mirror",
 	"Tijuana",
 	"Sucession",
-	"Fifty shades of grey 2",
+	"Fifty shades of grey 3",
 	"The inventor",
 	"Crush",
 	"Old",
