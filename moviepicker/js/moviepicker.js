@@ -81,7 +81,11 @@ const movies = [
 	"El aro",
 	"Last seen alive",
 	"The unholy",
-	"Air"]
+	"Air",
+	"The Fallout",
+	"Cómo ser soltera",
+	"Mamma mia",
+	"De ladron a policia"]
 
 const random = Math.floor(Math.random() * movies.length)
 
