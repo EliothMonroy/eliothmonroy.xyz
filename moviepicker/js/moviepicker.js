@@ -1,5 +1,4 @@
 const movies = [
-	"Game of thrones", 
 	"Mentalista", 
 	"Mentirosas nueva", 
 	"Chernovyl", 
@@ -82,7 +81,6 @@ const movies = [
 	"The unholy",
 	"Air",
 	"The Fallout",
-	"Cómo ser soltera",
 	"Mamma mia",
 	"De ladron a policia",
 	"Batman begins"]
