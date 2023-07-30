@@ -66,7 +66,6 @@ const movies = [
 	"Fifty shades of grey 3",
 	"The inventor",
 	"Old",
-	"Devil's child",
 	"3096 days",
 	"El huesped",
 	"Candy",
@@ -84,13 +83,12 @@ const movies = [
 	"65",
 	"Evil dead rise",
 	"The calling",
-	"Batman the Killing Joke",
 	"Joker",
 	"Hannibal",
 	"Cabin Fever",
 	"Godzilla",
 	"Sherlock Holmes",
-	"Matrix",
+	"Matrix 1",
 	"La abuela",
 	"Ace Ventura",
 	"Mission Imposible 1",
@@ -102,7 +100,16 @@ const movies = [
 	"Found footage",
 	"Las crónicas del miedo",
 	"Huesera",
-	"Death of a Ghost hunter"]
+	"Death of a Ghost hunter",
+	"The Meg",
+	"The Prestige",
+	"Tenet",
+	"Separation",
+	"Marty's Lane",
+	// https://www.radiotimes.com/movies/dcau-movies-order/
+	// https://editorial.rottentomatoes.com/guide/dc-animated-movies-in-order/
+	"SUPERMAN: DOOMSDAY (2007)",
+	"The Batman (Patkinson)"]
 
 const random = Math.floor(Math.random() * movies.length)
 
