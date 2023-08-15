@@ -76,7 +76,7 @@ const movies = [
 	"De ladron a policia",
 	"Batman 3",
 	"House of the Dragon",
-	"30 days of night",
+	"30 days of night 2",
 	"65",
 	"Evil dead rise",
 	"The calling",
