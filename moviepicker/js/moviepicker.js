@@ -7,7 +7,7 @@ const movies = [
 	"Señor de los anillos 1 extendida",
 	"El padrino", 
 	"Terminator 2", 
-	"Saw 4", 
+	"Saw 5", 
 	"La maldición", 
 	"Piratas del caribe",
 	"Código davinci",
@@ -56,7 +56,6 @@ const movies = [
 	"A Star is born",
 	"The calm beyond",
 	"Liar Liar",
-	"Bajo la misma estrella",
 	"Aladin live action",
 	"El rey leon",
 	"Tijuana",
@@ -76,7 +75,6 @@ const movies = [
 	"De ladron a policia",
 	"Batman 3",
 	"House of the Dragon",
-	"30 days of night 2",
 	"65",
 	"Evil dead rise",
 	"The calling",
@@ -100,11 +98,13 @@ const movies = [
 	"The Prestige",
 	"Tenet",
 	"Separation",
-	"Marty's Lane",
 	// https://www.radiotimes.com/movies/dcau-movies-order/
 	// https://editorial.rottentomatoes.com/guide/dc-animated-movies-in-order/
 	"SUPERMAN: DOOMSDAY (2007)",
-	"The Batman (Patkinson)"]
+	"The Batman (Patkinson)",
+	"Narcos",
+	"Doom",
+	"Twilight"]
 
 const random = Math.floor(Math.random() * movies.length)
 
