@@ -42,7 +42,6 @@ const movies = [
 	"Emily in Paris",
 	"You",
 	"Titanic",
-	"Troya",
 	"Novia de Chuky",
 	"The Unbearable Weight of Massive Talent",
 	"Get Smart",
