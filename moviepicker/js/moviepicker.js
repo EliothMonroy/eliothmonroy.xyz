@@ -39,7 +39,6 @@ const movies = [
 	"28 weeks",
 	"Mr pickles",
 	"Aun se lo que hicieron el verano pasado",
-	"Emily in Paris",
 	"You",
 	"Titanic",
 	"Novia de Chuky",
