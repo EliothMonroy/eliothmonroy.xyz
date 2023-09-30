@@ -99,7 +99,8 @@ const movies = [
 	"The Batman (Patkinson)",
 	"Narcos",
 	"Doom",
-	"Twilight 3"]
+	"Twilight 3",
+	"Pelicula Sandy Juanpa"]
 
 const random = Math.floor(Math.random() * movies.length)
 
