@@ -88,7 +88,6 @@ const movies = [
 	"Existe",
 	"Found footage",
 	"Las crónicas del miedo",
-	"Huesera",
 	"Death of a Ghost hunter",
 	"The Prestige",
 	"Tenet",
