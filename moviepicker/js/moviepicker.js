@@ -27,7 +27,6 @@ const movies = [
 	"Desaparecido",
 	"Mi vecino totoro",
 	"La quinta ola",
-	"La noche del demonio 3",
 	"Mapaches",
 	"The simpsons",
 	"RRR",
