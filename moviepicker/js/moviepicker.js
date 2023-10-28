@@ -55,7 +55,6 @@ const movies = [
 	"El rey leon",
 	"Tijuana",
 	"Sucession",
-	"Fifty shades of grey 3",
 	"The inventor",
 	"Old",
 	"3096 days",
