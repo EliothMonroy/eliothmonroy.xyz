@@ -87,7 +87,6 @@ const movies = [
 	"Found footage",
 	"Las crónicas del miedo",
 	"Death of a Ghost hunter",
-	"The Prestige",
 	"Tenet",
 	"Separation",
 	// https://www.radiotimes.com/movies/dcau-movies-order/
