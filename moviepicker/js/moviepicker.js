@@ -83,7 +83,6 @@ const movies = [
 	"Nobody",
 	"Get out",
 	"Top gun",
-	"Existe",
 	"Found footage",
 	"Las crónicas del miedo",
 	"Death of a Ghost hunter",
