@@ -16,7 +16,6 @@ const movies = [
 	"Ad Astra",
 	"Halloween resurrección",
 	"12 princesas",
-	"Crimen perfecto",
 	"Evolution",
 	"Bojack",
 	"Desencanto simpsons",
