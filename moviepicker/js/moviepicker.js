@@ -71,7 +71,6 @@ const movies = [
 	"Evil dead rise",
 	"The calling",
 	"Joker",
-	"Red Dragon",
 	"Cabin Fever",
 	"Godzilla",
 	"Sherlock Holmes",
