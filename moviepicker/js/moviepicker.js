@@ -55,7 +55,6 @@ const movies = [
 	"Tijuana",
 	"Sucession",
 	"The inventor",
-	"Old",
 	"3096 days",
 	"El huesped",
 	"Candy",
