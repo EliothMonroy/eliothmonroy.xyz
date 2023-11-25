@@ -36,7 +36,6 @@ const movies = [
 	"28 weeks",
 	"Mr pickles",
 	"Aun se lo que hicieron el verano pasado",
-	"You",
 	"Titanic",
 	"Novia de Chuky",
 	"The Unbearable Weight of Massive Talent",
@@ -93,7 +92,8 @@ const movies = [
 	"Twilight 3",
 	"Pelicula Sandy Juanpa",
 	"El Infierno",
-	"La ley de herodes"]
+	"La ley de herodes",
+	"The grudge 3"]
 
 const random = Math.floor(Math.random() * movies.length)
 
