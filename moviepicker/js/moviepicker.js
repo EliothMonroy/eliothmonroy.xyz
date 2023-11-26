@@ -58,7 +58,7 @@ const movies = [
 	"El huesped",
 	"Candy",
 	"End of days",
-	"El aro",
+	"El aro 2",
 	"Last seen alive",
 	"Air",
 	"Mamma mia",
