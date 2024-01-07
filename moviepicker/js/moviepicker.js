@@ -4,7 +4,7 @@ const movies = [
 	"Chernovyl",
 	"Fringe",
 	"Evangelion",
-	"Señor de los anillos 1 extendida",
+	"Señor de los anillos 2 extendida",
 	"El padrino",
 	"Terminator 2",
 	"Saw 5",
@@ -67,7 +67,7 @@ const movies = [
 	"Joker",
 	"Cabin Fever",
 	"Godzilla",
-	"Sherlock Holmes",
+	"Sherlock Holmes 2",
 	"Matrix 1",
 	"Ace Ventura",
 	"Mission Imposible 1",
@@ -87,7 +87,23 @@ const movies = [
 	"Doom",
 	"Pelicula Sandy Juanpa",
 	"El Infierno",
-	"La ley de herodes"]
+	"La ley de herodes",
+	"Memento",
+	"What if",
+	"Iron Man 2",
+	"Capitan America 1",
+	"Hulk",
+	"Amsterdam",
+	"Talk to me",
+	"RBD por siempre",
+	"Retribution"
+	"Otra pelicula de huevos y un pollo",
+	"The others",
+	"Los caballeros",
+	"Gladiator",
+	"Snowpiercer",
+	"Resident Evil Death Island",
+	"Spanglish"]
 
 const random = Math.floor(Math.random() * movies.length)
 
