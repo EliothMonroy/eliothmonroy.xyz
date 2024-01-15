@@ -90,7 +90,7 @@ const movies = [
 	"La ley de herodes",
 	"Memento",
 	"What if",
-	"Iron Man 2",
+	"Iron Man 3",
 	"Capitan America 1",
 	"Hulk",
 	"Amsterdam",
@@ -102,7 +102,8 @@ const movies = [
 	"Los caballeros",
 	"Gladiator",
 	"Snowpiercer",
-	"Resident Evil Death Island"]
+	"Resident Evil Death Island",
+	"True Detective"]
 
 const random = Math.floor(Math.random() * movies.length)
 
