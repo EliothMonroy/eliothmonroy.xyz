@@ -102,8 +102,7 @@ const movies = [
 	"Los caballeros",
 	"Gladiator",
 	"Snowpiercer",
-	"Resident Evil Death Island",
-	"Spanglish"]
+	"Resident Evil Death Island"]
 
 const random = Math.floor(Math.random() * movies.length)
 
