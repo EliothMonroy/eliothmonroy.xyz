@@ -94,7 +94,6 @@ const movies = [
 	"Capitan America 1",
 	"Hulk",
 	"Amsterdam",
-	"Talk to me",
 	"RBD por siempre",
 	"Retribution"
 	"Otra pelicula de huevos y un pollo",
