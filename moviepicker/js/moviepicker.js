@@ -104,7 +104,6 @@ const movies = [
 	"Resident Evil Death Island",
 	"True Detective S1",
 	"Funny People",
-	"Radical",
 	"Perdidos",
 	"DumbMoney",
 	"La Paradoja del Asesino"]
