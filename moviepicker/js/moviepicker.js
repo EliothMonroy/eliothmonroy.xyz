@@ -41,7 +41,6 @@ const movies = [
 	"The Unbearable Weight of Massive Talent",
 	"Get Smart",
 	"Demonic",
-	"Scare Me",
 	"All quiet in the north front",
 	"Bullet Train",
 	"A Star is born",
@@ -104,7 +103,8 @@ const movies = [
 	"Funny People",
 	"Perdidos",
 	"DumbMoney",
-	"La Paradoja del Asesino"]
+	"La Paradoja del Asesino"
+	"Sinister 2"]
 
 const random = Math.floor(Math.random() * movies.length)
 
