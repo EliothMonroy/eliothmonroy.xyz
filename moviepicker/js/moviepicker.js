@@ -103,7 +103,7 @@ const movies = [
 	"Funny People",
 	"Perdidos",
 	"DumbMoney",
-	"La Paradoja del Asesino"
+	"La Paradoja del Asesino",
 	"Sinister 2"]
 
 const random = Math.floor(Math.random() * movies.length)
