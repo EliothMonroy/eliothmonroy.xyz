@@ -92,7 +92,7 @@ const movies = [
 	"Hulk",
 	"Amsterdam",
 	"RBD por siempre",
-	"Retribution"
+	"Retribution",
 	"Otra pelicula de huevos y un pollo",
 	"The others",
 	"Los caballeros",
