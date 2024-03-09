@@ -69,7 +69,6 @@ const movies = [
 	"Ace Ventura",
 	"Mission Imposible 1",
 	"Nobody",
-	"Get out",
 	"Top gun",
 	"Found footage",
 	"Las crónicas del miedo",
