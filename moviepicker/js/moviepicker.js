@@ -58,7 +58,6 @@ const movies = [
 	"Mamma mia",
 	"De ladron a policia",
 	"Batman 3",
-	"House of the Dragon",
 	"65",
 	"The calling",
 	"Joker",
