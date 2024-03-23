@@ -62,7 +62,7 @@ const movies = [
 	"The calling",
 	"Joker",
 	"Cabin Fever",
-	"King Kong",
+	"Godzilla 2",
 	"Sherlock Holmes 2",
 	"Matrix 1",
 	"Ace Ventura",
@@ -104,7 +104,14 @@ const movies = [
 	"La Paradoja del Asesino",
 	"Sinister 2",
 	"Dune",
-	"Thanksgiving"]
+	"Thanksgiving",
+	"La Granja",
+	"The Northman",
+	"Zapatero a tus zapatos",
+	"El Portal del más alla",
+	"The 3 body problem",
+	"Time",
+	"Poor Things"]
 
 const random = Math.floor(Math.random() * movies.length)
 
