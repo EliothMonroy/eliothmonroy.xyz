@@ -62,7 +62,7 @@ const movies = [
 	"The calling",
 	"Joker",
 	"Cabin Fever",
-	"Godzilla 2",
+	"Godzilla vs Kong",
 	"Sherlock Holmes 2",
 	"Matrix 1",
 	"Ace Ventura",
