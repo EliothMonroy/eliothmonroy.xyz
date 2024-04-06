@@ -107,10 +107,9 @@ const movies = [
 	"The Northman",
 	"Zapatero a tus zapatos",
 	"El Portal del más alla",
-	"The 3 body problem",
 	"Time",
 	"Poor Things",
-	"Anatomy of a fall"]
+	"Perros de reserva"]
 
 const random = Math.floor(Math.random() * movies.length)
 
