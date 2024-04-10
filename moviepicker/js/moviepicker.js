@@ -109,7 +109,8 @@ const movies = [
 	"El Portal del más alla",
 	"Time",
 	"Poor Things",
-	"Perros de reserva"]
+	"Perros de reserva",
+	"Oppenheimer"]
 
 const random = Math.floor(Math.random() * movies.length)
 
