@@ -103,7 +103,6 @@ const movies = [
 	"La Paradoja del Asesino",
 	"Sinister 2",
 	"Dune",
-	"Thanksgiving",
 	"The Northman",
 	"Zapatero a tus zapatos",
 	"El Portal del más alla",
