@@ -108,7 +108,17 @@ const movies = [
 	"El Portal del más alla",
 	"Time",
 	"Poor Things",
-	"Perros de reserva"]
+	"Perros de reserva",
+	"Suzume",
+	"MobPysycho 100",
+	"La idea de ti",
+	"Lord of Misrule",
+	"Darkest hour",
+	"Sick",
+	"Concrete Utopia",
+	"Barbie Fairytopia"
+	"Barbie Pegaso",
+	"Jerry and Marge Go Large"]
 
 const random = Math.floor(Math.random() * movies.length)
 
