@@ -112,7 +112,6 @@ const movies = [
 	"Suzume",
 	"MobPysycho 100",
 	"La idea de ti",
-	"Lord of Misrule",
 	"Darkest hour",
 	"Sick",
 	"Concrete Utopia",
