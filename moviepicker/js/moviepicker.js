@@ -107,7 +107,6 @@ const movies = [
 	"Zapatero a tus zapatos",
 	"El Portal del más alla",
 	"Time",
-	"Poor Things",
 	"Perros de reserva",
 	"Suzume",
 	"MobPysycho 100",
@@ -115,7 +114,7 @@ const movies = [
 	"Darkest hour",
 	"Sick",
 	"Concrete Utopia",
-	"Barbie Fairytopia"
+	"Barbie Fairytopia",
 	"Barbie Pegaso",
 	"Jerry and Marge Go Large"]
 
