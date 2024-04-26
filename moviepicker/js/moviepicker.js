@@ -28,7 +28,6 @@ const movies = [
 	"La quinta ola",
 	"Mapaches",
 	"The simpsons",
-	"RRR",
 	"Resident evil 5",
 	"Kiki entregas a domicilio",
 	"La colina de las amapolas",
