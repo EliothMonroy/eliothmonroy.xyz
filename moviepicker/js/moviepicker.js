@@ -115,7 +115,12 @@ const movies = [
 	"Concrete Utopia",
 	"Barbie Fairytopia",
 	"Barbie Pegaso",
-	"Jerry and Marge Go Large"]
+	"Jerry and Marge Go Large",
+	"El examen",
+	"The outsider",
+	"Dick & Jane",
+	"Tusk",
+	"Jujutsu Kaisen"]
 
 const random = Math.floor(Math.random() * movies.length)
 
