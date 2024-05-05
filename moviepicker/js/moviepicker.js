@@ -9,7 +9,7 @@ const movies = [
 	"Terminator 2",
 	"Saw 5",
 	"La maldición",
-	"Piratas del caribe 3",
+	"Piratas del caribe 4",
 	"Código davinci",
 	"Prision break",
 	"Mentes criminales",
