@@ -117,10 +117,12 @@ const movies = [
 	"Barbie Pegaso",
 	"Jerry and Marge Go Large",
 	"El examen",
-	"The outsider",
 	"Dick & Jane",
 	"Tusk",
-	"Jujutsu Kaisen"]
+	"Jujutsu Kaisen",
+	"The Sinner",
+	"Sharp Objects",
+	"The Night of"]
 
 const random = Math.floor(Math.random() * movies.length)
 
