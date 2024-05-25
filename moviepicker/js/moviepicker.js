@@ -121,9 +121,11 @@ const movies = [
 	"Tusk",
 	"Jujutsu Kaisen",
 	"The Sinner",
-	"The Night of",
 	"The beekeper",
-	"Rise of the Planet of the Apes"]
+	"Rise of the Planet of the Apes",
+	"Monolith",
+	"Mr. Deeds",
+	"Truman"]
 
 const random = Math.floor(Math.random() * movies.length)
 
