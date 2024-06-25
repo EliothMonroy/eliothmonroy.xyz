@@ -126,7 +126,8 @@ const movies = [
 	"Monolith",
 	"Mr. Deeds",
 	"Truman",
-	"Godzilla Minus One"]
+	"Godzilla Minus One",
+	"Chuky"]
 
 const random = Math.floor(Math.random() * movies.length)
 
