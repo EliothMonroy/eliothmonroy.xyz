@@ -133,6 +133,8 @@ const movies = [
   "Wedding Crashers",
   "Dumb and Dumber",
   "Distric 9",
+  "Sausage Party: Foodtopia",
+  "Circus Du Soleil: Without a net",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
