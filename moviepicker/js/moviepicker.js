@@ -136,6 +136,10 @@ const movies = [
   "Sausage Party: Foodtopia",
   "Circus Du Soleil: Without a net",
   "Regression",
+  "Futurama",
+  "The First Omen",
+  "The Wire",
+  "Migration",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
