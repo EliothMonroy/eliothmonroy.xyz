@@ -131,7 +131,7 @@ const movies = [
   "One Life",
   "Estación Zombie Busan Train",
   "Wedding Crashers",
-  "Dumb and Dumber",
+  "Dumb and Dumber 2",
   "Distric 9",
   "Sausage Party: Foodtopia",
   "Circus Du Soleil: Without a net",
