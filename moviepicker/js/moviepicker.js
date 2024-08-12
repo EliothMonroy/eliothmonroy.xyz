@@ -129,7 +129,7 @@ const movies = [
   "Godzilla Minus One",
   "Chuky",
   "One Life",
-  "Estación Zombie Busan Train",
+  "Estación Zombie Busan Train 2",
   "Wedding Crashers",
   "Dumb and Dumber 2",
   "Distric 9",
