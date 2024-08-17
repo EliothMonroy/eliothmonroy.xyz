@@ -140,6 +140,7 @@ const movies = [
   "The First Omen",
   "The Wire",
   "Migration",
+  "Tarot",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
