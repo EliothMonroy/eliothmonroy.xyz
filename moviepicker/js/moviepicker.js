@@ -35,9 +35,7 @@ const movies = [
   "28 weeks",
   "Mr pickles",
   "Aun se lo que hicieron el verano pasado",
-  "Titanic",
   "Novia de Chuky",
-  "The Unbearable Weight of Massive Talent",
   "Get Smart",
   "Demonic",
   "All quiet in the north front",
@@ -141,6 +139,12 @@ const movies = [
   "The Wire",
   "Migration",
   "Tarot",
+  "Lost",
+  "King the Land",
+  "Un amor para recordar",
+  "Suzume",
+  "Amarte duele",
+  "Demon Slayer",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
