@@ -56,7 +56,6 @@ const movies = [
   "De ladron a policia",
   "Batman 3",
   "65",
-  "The calling",
   "Joker",
   "Cabin Fever",
   "Godzilla vs Kong",
