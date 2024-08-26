@@ -114,7 +114,6 @@ const movies = [
   "Barbie Pegaso",
   "Jerry and Marge Go Large",
   "El examen",
-  "Dick & Jane",
   "Tusk",
   "Jujutsu Kaisen",
   "The Sinner",
@@ -144,6 +143,7 @@ const movies = [
   "Suzume",
   "Amarte duele",
   "Demon Slayer",
+  "Virus",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
