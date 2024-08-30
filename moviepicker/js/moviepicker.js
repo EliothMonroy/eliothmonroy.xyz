@@ -144,6 +144,7 @@ const movies = [
   "Amarte duele",
   "Demon Slayer",
   "Virus",
+  "Full Metal Alchemist: Brotherhood",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
