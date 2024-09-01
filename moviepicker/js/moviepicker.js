@@ -130,7 +130,6 @@ const movies = [
   "Distric 9",
   "Sausage Party: Foodtopia",
   "Circus Du Soleil: Without a net",
-  "Regression",
   "Futurama",
   "The First Omen",
   "The Wire",
@@ -144,6 +143,9 @@ const movies = [
   "Demon Slayer",
   "Virus",
   "Full Metal Alchemist: Brotherhood",
+  "The Girls on the Train",
+  "Elevator Game",
+  "La invasión",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
