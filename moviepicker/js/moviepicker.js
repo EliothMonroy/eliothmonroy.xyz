@@ -146,6 +146,7 @@ const movies = [
   "The Girls on the Train",
   "Elevator Game",
   "La invasión",
+  "The Holdovers",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
