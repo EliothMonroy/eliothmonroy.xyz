@@ -144,7 +144,6 @@ const movies = [
   "Virus",
   "Full Metal Alchemist: Brotherhood",
   "The Girls on the Train",
-  "Elevator Game",
   "La invasión",
   "The Holdovers",
 ];
