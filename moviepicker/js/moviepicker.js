@@ -142,10 +142,10 @@ const movies = [
   "Amarte duele",
   "Demon Slayer",
   "Virus",
-  "Full Metal Alchemist: Brotherhood",
   "The Girls on the Train",
   "La invasión",
   "The Holdovers",
+  "La Tumba de las Luciernagas",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
