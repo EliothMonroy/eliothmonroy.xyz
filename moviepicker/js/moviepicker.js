@@ -146,6 +146,7 @@ const movies = [
   "La invasión",
   "The Holdovers",
   "La Tumba de las Luciernagas",
+  "The Tatami Galaxy",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
