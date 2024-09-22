@@ -107,7 +107,6 @@ const movies = [
   "MobPysycho 100",
   "La idea de ti",
   "Darkest hour",
-  "Sick",
   "Concrete Utopia",
   "Barbie Fairytopia",
   "Barbie Pegaso",
@@ -150,6 +149,7 @@ const movies = [
   "The Penguin",
   "The Exorcism of Emily Rose",
   "Panic Room",
+  "Hunter x Hunter",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
