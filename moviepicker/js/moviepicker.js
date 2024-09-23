@@ -60,7 +60,7 @@ const movies = [
   "Godzilla vs Kong",
   "Sherlock Holmes 2",
   "Matrix 1",
-  "Ace Ventura",
+  "Ace Ventura 2",
   "Mission Imposible 1",
   "Nobody",
   "Top gun",
