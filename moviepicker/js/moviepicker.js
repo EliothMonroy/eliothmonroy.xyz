@@ -149,6 +149,8 @@ const movies = [
   "The Exorcism of Emily Rose",
   "Panic Room",
   "Hunter x Hunter",
+  "Robot Dreams",
+  "Courtois, the Return of the Number 1",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
