@@ -66,7 +66,6 @@ const movies = [
   "Top gun",
   "Found footage",
   "Las crónicas del miedo",
-  "Death of a Ghost hunter",
   "Tenet",
   "Separation",
   // https://www.radiotimes.com/movies/dcau-movies-order/
