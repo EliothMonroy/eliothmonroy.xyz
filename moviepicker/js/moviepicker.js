@@ -49,7 +49,6 @@ const movies = [
   "3096 days",
   "El huesped",
   "End of days",
-  "Last seen alive",
   "Mamma mia",
   "De ladron a policia",
   "Batman 3",
@@ -119,7 +118,6 @@ const movies = [
   "Truman",
   "Godzilla Minus One",
   "Chuky",
-  "One Life",
   "Estación Zombie Busan Train 2",
   "Wedding Crashers",
   "Dumb and Dumber 2",
@@ -148,6 +146,9 @@ const movies = [
   "Hunter x Hunter",
   "Robot Dreams",
   "Courtois, the Return of the Number 1",
+  "Deception (2008)",
+  "Salems Lot",
+  "El Niño y la Garza",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
