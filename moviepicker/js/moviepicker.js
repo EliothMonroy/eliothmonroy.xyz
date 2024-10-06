@@ -149,6 +149,7 @@ const movies = [
   "Deception (2008)",
   "Salems Lot",
   "El Niño y la Garza",
+  "Uzumaki",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
