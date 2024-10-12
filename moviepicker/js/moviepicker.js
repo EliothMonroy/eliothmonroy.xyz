@@ -148,6 +148,10 @@ const movies = [
   "Salems Lot",
   "El Niño y la Garza",
   "Uzumaki",
+  "Winnie The Pooh - Blood and Honey",
+  "Death Sentence",
+  "Kinds of Kindness",
+  "Hold your breath",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
