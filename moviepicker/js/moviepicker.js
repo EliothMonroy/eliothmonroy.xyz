@@ -129,7 +129,6 @@ const movies = [
   "Migration",
   "Tarot",
   "Lost",
-  "Un amor para recordar",
   "Amarte duele",
   "Demon Slayer",
   "Virus",
