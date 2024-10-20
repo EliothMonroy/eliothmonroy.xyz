@@ -107,7 +107,6 @@ const movies = [
   "Barbie Pegaso",
   "Jerry and Marge Go Large",
   "El examen",
-  "Tusk",
   "Jujutsu Kaisen",
   "The Sinner",
   "The beekeper",
