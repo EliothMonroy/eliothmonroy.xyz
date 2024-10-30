@@ -122,7 +122,6 @@ const movies = [
   "Sausage Party: Foodtopia",
   "Circus Du Soleil: Without a net",
   "Futurama",
-  "The Omen",
   "The Wire",
   "Migration",
   "Tarot",
