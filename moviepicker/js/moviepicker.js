@@ -12,7 +12,6 @@ const movies = [
   "Piratas del caribe 4",
   "Código davinci",
   "Prision break",
-  "Mentes criminales",
   "Ad Astra",
   "Halloween resurrección",
   "12 princesas",
