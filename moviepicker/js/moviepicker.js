@@ -147,6 +147,8 @@ const movies = [
   "Death Sentence",
   "Kinds of Kindness",
   "Hold your breath",
+  "Dark Souls",
+  "Strange Way of Life",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
