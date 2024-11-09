@@ -149,6 +149,10 @@ const movies = [
   "Hold your breath",
   "Dark Souls",
   "Strange Way of Life",
+  "Poderes Ocultos",
+  "Godzilla",
+  "Collateral Damage",
+  "The Bone Collector",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
