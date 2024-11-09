@@ -35,7 +35,6 @@ const movies = [
   "Mr pickles",
   "Aun se lo que hicieron el verano pasado",
   "Novia de Chuky",
-  "Demonic",
   "All quiet in the north front",
   "Bullet Train",
   "A Star is born",
