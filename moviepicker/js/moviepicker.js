@@ -133,7 +133,6 @@ const movies = [
   "La Tumba de las Luciernagas",
   "The Tatami Galaxy",
   "The Penguin",
-  "The Exorcism of Emily Rose",
   "Panic Room",
   "Hunter x Hunter",
   "Robot Dreams",
