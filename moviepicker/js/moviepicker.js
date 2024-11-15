@@ -151,6 +151,7 @@ const movies = [
   "Godzilla",
   "Collateral Damage",
   "The Bone Collector",
+  "Vidas Pasadas",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
