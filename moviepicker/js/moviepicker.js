@@ -144,7 +144,6 @@ const movies = [
   "Dark Souls",
   "Strange Way of Life",
   "Poderes Ocultos",
-  "Godzilla",
   "Collateral Damage",
   "The Bone Collector",
   "Vidas Pasadas",
