@@ -129,7 +129,6 @@ const movies = [
   "La Tumba de las Luciernagas",
   "The Tatami Galaxy",
   "The Penguin",
-  "Panic Room",
   "Hunter x Hunter",
   "Robot Dreams",
   "Courtois, the Return of the Number 1",
@@ -147,6 +146,9 @@ const movies = [
   "Collateral Damage",
   "The Bone Collector",
   "Vidas Pasadas",
+  "Toradora!",
+  "Kimi ni Todoke",
+  "Cloverfield",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
