@@ -148,7 +148,7 @@ const movies = [
   "Vidas Pasadas",
   "Toradora!",
   "Kimi ni Todoke",
-  "Cloverfield",
+  "Cloverfield Paradox",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
