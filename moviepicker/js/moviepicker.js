@@ -149,7 +149,7 @@ const movies = [
   "Toradora!",
   "Kimi ni Todoke",
   "Cloverfield Paradox",
-  "DanDan",
+  "Dandadan",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
