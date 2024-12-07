@@ -137,7 +137,6 @@ const movies = [
   "El Niño y la Garza",
   "Uzumaki",
   "Winnie The Pooh - Blood and Honey",
-  "Death Sentence",
   "Kinds of Kindness",
   "Hold your breath",
   "Dark Souls",
@@ -150,6 +149,12 @@ const movies = [
   "Kimi ni Todoke",
   "Cloverfield Paradox",
   "Dandadan",
+  "La bóveda",
+  "El viento",
+  "Secretos de Familia",
+  "El ocaso de la luz",
+  "Rostros en la oscuridad",
+  "El lago de hielo",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
