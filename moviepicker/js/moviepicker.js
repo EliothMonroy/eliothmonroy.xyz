@@ -91,7 +91,6 @@ const movies = [
   "Sinister 2",
   "Dune",
   "The Northman",
-  "El Portal del más alla",
   "Time",
   "Perros de reserva",
   "MobPysycho 100",
