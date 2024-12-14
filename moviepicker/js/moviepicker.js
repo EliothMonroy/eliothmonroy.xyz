@@ -156,6 +156,8 @@ const movies = [
   "El lago de hielo",
   "A Team Called SPAIN: The Road to the Fourth Win",
   "The Boogeyman",
+  "Shaman King",
+  "Trigun",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
