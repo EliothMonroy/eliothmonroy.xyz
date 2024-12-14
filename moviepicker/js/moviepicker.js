@@ -154,6 +154,8 @@ const movies = [
   "El ocaso de la luz",
   "Rostros en la oscuridad",
   "El lago de hielo",
+  "A Team Called SPAIN: The Road to the Fourth Win",
+  "The Boogeyman",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
