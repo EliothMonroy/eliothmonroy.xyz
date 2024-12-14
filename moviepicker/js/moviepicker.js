@@ -119,7 +119,6 @@ const movies = [
   "Migration",
   "Tarot",
   "Lost",
-  "Amarte duele",
   "Demon Slayer",
   "Virus",
   "The Girls on the Train",
