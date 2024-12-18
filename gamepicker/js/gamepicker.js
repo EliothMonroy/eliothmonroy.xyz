@@ -1,4 +1,4 @@
-const movies = [
+const games = [
   "Gears of War 1",
   "Fifa 25",
   "Fable 1",
@@ -29,8 +29,8 @@ const movies = [
   "Yu-Gi-Oh! Legacy of the Duelist : Link Evolution",
 ];
 
-const random = Math.floor(Math.random() * movies.length);
+const random = Math.floor(Math.random() * games.length);
 
-var moviePicked = document.getElementById("moviePicked");
+var gamePicked = document.getElementById("gamePicked");
 
-moviePicked.textContent += movies[random];
+gamePicked.textContent += games[random];
