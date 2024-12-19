@@ -115,7 +115,6 @@ const movies = [
   "Futurama",
   "The Wire",
   "Migration",
-  "Tarot",
   "Lost",
   "Demon Slayer",
   "Virus",
