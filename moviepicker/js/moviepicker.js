@@ -154,6 +154,8 @@ const movies = [
   "The Boogeyman",
   "Shaman King",
   "Trigun",
+  "I'm Tim",
+  "Avicii The Last Show",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
