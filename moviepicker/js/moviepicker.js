@@ -80,7 +80,6 @@ const movies = [
   "Retribution",
   "Otra pelicula de huevos y un pollo",
   "The others",
-  "Los caballeros",
   "Snowpiercer",
   "Resident Evil Death Island",
   "True Detective S1",
