@@ -119,7 +119,6 @@ const movies = [
   "Virus",
   "The Girls on the Train",
   "La invasión",
-  "The Holdovers",
   "La Tumba de las Luciernagas",
   "The Tatami Galaxy",
   "The Penguin",
