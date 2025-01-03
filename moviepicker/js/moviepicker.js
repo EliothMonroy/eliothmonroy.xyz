@@ -152,8 +152,8 @@ const movies = [
   "The Boogeyman",
   "Shaman King",
   "Trigun",
-  "I'm Tim",
   "Avicii The Last Show",
+  "Wallace and Gromit: La venganza se sirve con plumas",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
