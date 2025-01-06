@@ -91,7 +91,6 @@ const movies = [
   "MobPysycho 100",
   "La idea de ti",
   "Darkest hour",
-  "Concrete Utopia",
   "Barbie Fairytopia",
   "Barbie Pegaso",
   "Jerry and Marge Go Large",
