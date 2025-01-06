@@ -150,6 +150,10 @@ const movies = [
   "Trigun",
   "Avicii The Last Show",
   "Wallace and Gromit: La venganza se sirve con plumas",
+  "Jury #2",
+  "Emilia Perez",
+  "Baby reindeer",
+  "My happy marriage",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
