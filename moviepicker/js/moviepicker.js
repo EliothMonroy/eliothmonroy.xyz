@@ -155,6 +155,11 @@ const movies = [
   "Baby reindeer",
   "My happy marriage",
   "Shogun",
+  "Afraid",
+  "Killer Elite",
+  "Crank High Voltage",
+  "Oculus",
+  "My Son",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
