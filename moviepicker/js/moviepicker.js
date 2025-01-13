@@ -153,13 +153,15 @@ const movies = [
   "Juror #2",
   "Emilia Perez",
   "Baby reindeer",
-  "My happy marriage",
   "Shogun",
   "Afraid",
   "Killer Elite",
   "Crank High Voltage",
   "Oculus",
   "My Son",
+  "Marry My Husband",
+  "La Presa",
+  "Project Gemini",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
