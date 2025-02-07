@@ -162,6 +162,7 @@ const movies = [
   "La Presa",
   "Project Gemini",
   "The Thing",
+  "Double Impact",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
