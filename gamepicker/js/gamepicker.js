@@ -4,7 +4,6 @@ const games = [
   "Fable 1",
   "Fallout 3",
   "Shadow of Mordor",
-  "Street Fighters",
   "Army of Two",
   "Gears of War Judgment",
   "GTA Vice City",
@@ -27,6 +26,9 @@ const games = [
   "Dead Space",
   "Stardew Valley",
   "Yu-Gi-Oh! Legacy of the Duelist : Link Evolution",
+  "Mafia 1",
+  "Street Fighter IV",
+  "Resident Evil 0",
 ];
 
 const random = Math.floor(Math.random() * games.length);

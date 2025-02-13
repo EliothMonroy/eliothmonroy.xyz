@@ -128,7 +128,6 @@ const movies = [
   "Winnie The Pooh - Blood and Honey",
   "Kinds of Kindness",
   "Hold your breath",
-  "Dark Souls",
   "Strange Way of Life",
   "Poderes Ocultos",
   "Collateral Damage",
