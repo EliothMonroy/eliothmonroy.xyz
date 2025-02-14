@@ -162,6 +162,8 @@ const movies = [
   "Project Gemini",
   "The Thing",
   "Double Impact",
+  "Invincible",
+  "Real Madrid: Como no te voy a querer",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
