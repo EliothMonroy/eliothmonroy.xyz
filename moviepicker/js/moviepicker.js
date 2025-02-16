@@ -80,7 +80,7 @@ const movies = [
   "The others",
   "Snowpiercer",
   "Resident Evil Death Island",
-  "True Detective S2",
+  "True Detective S3",
   "Funny People",
   "DumbMoney",
   "Sinister 2",
