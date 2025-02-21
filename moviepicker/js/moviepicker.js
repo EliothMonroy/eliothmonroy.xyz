@@ -165,6 +165,8 @@ const movies = [
   "Invincible",
   "Real Madrid: Como no te voy a querer",
   "Una propuesta indecente",
+  "The Gallows",
+  "Paradise",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
