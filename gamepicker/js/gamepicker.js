@@ -29,6 +29,8 @@ const games = [
   "Mafia 1",
   "Street Fighter IV",
   "Resident Evil 0",
+  "Kingdom Come Deliverance",
+  "One Punch Man",
 ];
 
 const random = Math.floor(Math.random() * games.length);
