@@ -31,6 +31,7 @@ const games = [
   "Resident Evil 0",
   "Kingdom Come Deliverance",
   "One Punch Man",
+  "Halo 3: ODST",
 ];
 
 const random = Math.floor(Math.random() * games.length);
