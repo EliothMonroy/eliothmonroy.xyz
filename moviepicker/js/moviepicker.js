@@ -113,7 +113,6 @@ const movies = [
   "Lost",
   "Demon Slayer",
   "Virus",
-  "The Girls on the Train",
   "La invasión",
   "La Tumba de las Luciernagas",
   "The Tatami Galaxy",
@@ -172,6 +171,14 @@ const movies = [
   "The Lord Of The Rings: The War Of The Rohirrim",
   "The Last House Left",
   "Thomas Müller - One of a Kind",
+  "The Apprentice",
+  "Renfield",
+  "NICKEL BOYS",
+  "The Book of Eli",
+  "Mare of Easttown",
+  "The Gallows",
+  "Tower Heist",
+  "Smile 2",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
