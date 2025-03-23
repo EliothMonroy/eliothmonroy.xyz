@@ -175,7 +175,6 @@ const movies = [
   "Renfield",
   "NICKEL BOYS",
   "The Book of Eli",
-  "Mare of Easttown",
   "The Gallows",
   "Tower Heist",
   "Smile 2",
