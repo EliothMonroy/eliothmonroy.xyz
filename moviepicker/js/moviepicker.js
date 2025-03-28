@@ -178,6 +178,8 @@ const movies = [
   "The Gallows",
   "Tower Heist",
   "Smile 2",
+  "Holland",
+  "A Real Pain",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
