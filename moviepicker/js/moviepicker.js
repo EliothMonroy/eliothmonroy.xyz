@@ -180,6 +180,9 @@ const movies = [
   "Smile 2",
   "Holland",
   "A Real Pain",
+  "It",
+  "Jeepers Creepers Reborn",
+  "Jack & Jill",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
