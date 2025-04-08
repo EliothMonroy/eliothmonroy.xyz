@@ -180,7 +180,6 @@ const movies = [
   "Smile 2",
   "Holland",
   "A Real Pain",
-  "It 2",
   "Jeepers Creepers Reborn",
   "Jack & Jill",
 ];
