@@ -179,7 +179,6 @@ const movies = [
   "Tower Heist",
   "Smile 2",
   "Holland",
-  "Jeepers Creepers Reborn",
   "Jack & Jill",
   "Black Mirror",
 ];
