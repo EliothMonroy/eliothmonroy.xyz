@@ -179,9 +179,9 @@ const movies = [
   "Tower Heist",
   "Smile 2",
   "Holland",
-  "A Real Pain",
   "Jeepers Creepers Reborn",
   "Jack & Jill",
+  "Black Mirror",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
