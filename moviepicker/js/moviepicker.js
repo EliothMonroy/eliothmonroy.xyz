@@ -181,6 +181,14 @@ const movies = [
   "Holland",
   "Jack & Jill",
   "Black Mirror",
+  "Conclave",
+  "Companion",
+  "A Simple Favor",
+  "Birthright",
+  "Battle: Los Angeles",
+  "The Boogeyman",
+  "The Girl with the Dragon Tattoo",
+  "Bagman",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
