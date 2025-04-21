@@ -182,7 +182,6 @@ const movies = [
   "Jack & Jill",
   "Black Mirror",
   "Conclave",
-  "Companion",
   "A Simple Favor",
   "Birthright",
   "Battle: Los Angeles",
