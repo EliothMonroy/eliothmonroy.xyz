@@ -180,7 +180,6 @@ const movies = [
   "Smile 2",
   "Holland",
   "Jack & Jill",
-  "Black Mirror",
   "Conclave",
   "A Simple Favor",
   "Birthright",
