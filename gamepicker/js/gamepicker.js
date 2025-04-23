@@ -9,7 +9,7 @@ const games = [
   "GTA Vice City",
   "GTA V",
   "Crash Team Racing",
-  "Skyrim",
+  "Oblivion Remastered",
   "The Witcher 3",
   "Red Dead Redemption",
   "Palworld",
