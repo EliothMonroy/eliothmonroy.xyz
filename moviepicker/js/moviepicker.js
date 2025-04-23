@@ -187,6 +187,7 @@ const movies = [
   "The Boogeyman",
   "The Girl with the Dragon Tattoo",
   "Bagman",
+  "Babygirl",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
