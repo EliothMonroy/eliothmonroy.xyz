@@ -180,7 +180,6 @@ const movies = [
   "Smile 2",
   "Holland",
   "Jack & Jill",
-  "Conclave",
   "A Simple Favor",
   "Birthright",
   "Battle: Los Angeles",
@@ -190,6 +189,13 @@ const movies = [
   "Babygirl",
   "405: Possession",
   "Santa Noche",
+  "El Juego del Miedo",
+  "La Leyenda del Jinete Sin Cabeza",
+  "Atrapada",
+  "No sigas las voces",
+  "It Comes at Night",
+  "24",
+  "La Ley y el Orden S1",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
