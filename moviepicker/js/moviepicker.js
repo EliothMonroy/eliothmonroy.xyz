@@ -196,6 +196,7 @@ const movies = [
   "It Comes at Night",
   "24",
   "La Ley y el Orden S1",
+  "Final Destination 2",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
