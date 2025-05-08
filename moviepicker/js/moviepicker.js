@@ -180,7 +180,7 @@ const movies = [
   "Smile 2",
   "Holland",
   "Jack & Jill",
-  "A Simple Favor",
+  "Another Simple Favor",
   "Birthright",
   "Battle: Los Angeles",
   "The Boogeyman",
