@@ -197,6 +197,17 @@ const movies = [
   "24",
   "La Ley y el Orden S1",
   "Final Destination 2",
+  "Cuckoo",
+  "Y Llegaron de Noche",
+  "Picture This",
+  "Ash",
+  "Wrath of Man",
+  "Faces in the Crowd",
+  "Mildred Pierce",
+  "Lazarus",
+  "Como Ganar Millones antes de que la abuela muera",
+  "Extraterritorial",
+  "La Partida de Go",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
