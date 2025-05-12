@@ -195,7 +195,6 @@ const movies = [
   "24",
   "La Ley y el Orden S1",
   "Final Destination 2",
-  "Cuckoo",
   "Y Llegaron de Noche",
   "Picture This",
   "Ash",
@@ -206,6 +205,7 @@ const movies = [
   "Como Ganar Millones antes de que la abuela muera",
   "Extraterritorial",
   "La Partida de Go",
+  "Lost S2",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
