@@ -194,7 +194,7 @@ const movies = [
   "It Comes at Night",
   "24",
   "La Ley y el Orden S1",
-  "Final Destination 2",
+  "Final Destination 3",
   "Y Llegaron de Noche",
   "Picture This",
   "Ash",
