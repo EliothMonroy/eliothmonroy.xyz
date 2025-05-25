@@ -206,7 +206,6 @@ const movies = [
   "La Partida de Go",
   "Lost S2",
   "Safe",
-  "Heretic",
   "Mickey 17",
 ];
 
