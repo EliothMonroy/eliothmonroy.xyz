@@ -205,8 +205,10 @@ const movies = [
   "Extraterritorial",
   "La Partida de Go",
   "Lost S2",
-  "Safe",
   "Mickey 17",
+  "Hostel",
+  "A Haunting in Venice",
+  "The Assessment",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
