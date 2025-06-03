@@ -206,7 +206,7 @@ const movies = [
   "La Partida de Go",
   "Lost S2",
   "Mickey 17",
-  "Hostel",
+  "Hostel 3",
   "A Haunting in Venice",
   "The Assessment",
 ];
