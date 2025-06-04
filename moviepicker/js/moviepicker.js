@@ -77,7 +77,6 @@ const movies = [
   "RBD por siempre",
   "Retribution",
   "Otra pelicula de huevos y un pollo",
-  "The others",
   "Snowpiercer",
   "Resident Evil Death Island",
   "True Detective S4",
