@@ -51,7 +51,6 @@ const movies = [
   "Joker",
   "Cabin Fever",
   "Godzilla vs Kong",
-  "Sherlock Holmes 2",
   "Matrix 1",
   "Ace Ventura 2",
   "Mission Imposible 1",
