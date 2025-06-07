@@ -208,6 +208,11 @@ const movies = [
   "Hostel 3",
   "A Haunting in Venice",
   "The Assessment",
+  "Prom Night",
+  "The Accountant",
+  "Presence",
+  "The Better Sister",
+  "A Working Man",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
