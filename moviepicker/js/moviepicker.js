@@ -211,7 +211,6 @@ const movies = [
   "The Better Sister",
   "A Working Man",
   "The Wailing",
-  "Mentiras",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
