@@ -210,6 +210,9 @@ const movies = [
   "Presence",
   "The Better Sister",
   "A Working Man",
+  "Aprender a Soltar",
+  "Prisioners",
+  "El tiempo que tenemos",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
