@@ -30,7 +30,6 @@ const movies = [
   "Kiki entregas a domicilio",
   "La colina de las amapolas",
   "Cuentos de terramar",
-  "28 weeks",
   "Mr pickles",
   "Aun se lo que hicieron el verano pasado",
   "Novia de Chuky",
@@ -190,7 +189,6 @@ const movies = [
   "It Comes at Night",
   "24",
   "La Ley y el Orden S1",
-  "Final Destination 4",
   "Y Llegaron de Noche",
   "Picture This",
   "Ash",
@@ -215,6 +213,9 @@ const movies = [
   "El tiempo que tenemos",
   "It Feeds",
   "Big Daddy",
+  "Retrato de un amor a ciegas",
+  "La maldición de Hill House",
+  "Pearl",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
