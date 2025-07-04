@@ -86,7 +86,6 @@ const movies = [
   "Time",
   "Perros de reserva",
   "MobPysycho 100",
-  "La idea de ti",
   "Darkest hour",
   "Barbie Fairytopia",
   "Barbie Pegaso",
@@ -182,7 +181,6 @@ const movies = [
   "Bagman",
   "405: Possession",
   "Santa Noche",
-  "El Juego del Miedo",
   "La Leyenda del Jinete Sin Cabeza",
   "Atrapada",
   "No sigas las voces",
@@ -216,6 +214,7 @@ const movies = [
   "Retrato de un amor a ciegas",
   "La maldición de Hill House",
   "Pearl",
+  "El Joven Manos de Tijera",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
