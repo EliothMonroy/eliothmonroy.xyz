@@ -217,7 +217,6 @@ const movies = [
   "El Joven Manos de Tijera",
   "Them The Scare",
   "X",
-  "Sinners",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
