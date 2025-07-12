@@ -218,6 +218,9 @@ const movies = [
   "Them The Scare",
   "X",
   "Elevation",
+  "Ziam",
+  "Wicked",
+  "White Out",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
