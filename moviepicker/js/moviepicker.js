@@ -221,6 +221,7 @@ const movies = [
   "Ziam",
   "Wicked",
   "White Out",
+  "Call me by your name",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
