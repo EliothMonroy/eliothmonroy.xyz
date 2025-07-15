@@ -171,7 +171,6 @@ const movies = [
   "The Book of Eli",
   "The Gallows",
   "Tower Heist",
-  "Smile 2",
   "Holland",
   "Jack & Jill",
   "Birthright",
@@ -222,6 +221,9 @@ const movies = [
   "Wicked",
   "White Out",
   "Call me by your name",
+  "Belzebuth",
+  "Siete días y una vida",
+  "US",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
