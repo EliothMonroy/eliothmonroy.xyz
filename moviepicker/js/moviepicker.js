@@ -223,7 +223,10 @@ const movies = [
   "Call me by your name",
   "Belzebuth",
   "Siete días y una vida",
-  "US",
+  "Underworld",
+  "Feardotcom",
+  "Spirit in the Blood",
+  "The Front Room",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
