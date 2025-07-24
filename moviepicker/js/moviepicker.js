@@ -184,7 +184,7 @@ const movies = [
   "Atrapada",
   "No sigas las voces",
   "It Comes at Night",
-  "24",
+  "24 S2",
   "La Ley y el Orden S1",
   "Y Llegaron de Noche",
   "Picture This",
