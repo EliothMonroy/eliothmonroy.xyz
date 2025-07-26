@@ -227,6 +227,8 @@ const movies = [
   "Feardotcom",
   "Spirit in the Blood",
   "The Front Room",
+  "Until Dawn",
+  "Marlowe",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
