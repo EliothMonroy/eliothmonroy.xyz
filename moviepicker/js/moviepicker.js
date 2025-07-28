@@ -217,7 +217,6 @@ const movies = [
   "Them The Scare",
   "X",
   "Elevation",
-  "Ziam",
   "Wicked",
   "White Out",
   "Call me by your name",
