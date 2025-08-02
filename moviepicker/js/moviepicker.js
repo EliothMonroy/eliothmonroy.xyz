@@ -228,6 +228,12 @@ const movies = [
   "The Front Room",
   "Until Dawn",
   "Marlowe",
+  "War of the Worlds - Ice Cube",
+  "Spiderman",
+  "Final Destination Bloodlines",
+  "Bed Rest",
+  "Inception",
+  "The Naked Gun",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
