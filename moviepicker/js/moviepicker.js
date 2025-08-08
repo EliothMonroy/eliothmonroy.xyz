@@ -234,6 +234,9 @@ const movies = [
   "Bed Rest",
   "Inception",
   "The Naked Gun",
+  "Mi Año en Oxford",
+  "Terrifier 3",
+  "Fear",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
