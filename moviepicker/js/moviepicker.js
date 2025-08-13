@@ -228,7 +228,6 @@ const movies = [
   "The Front Room",
   "Until Dawn",
   "Marlowe",
-  "War of the Worlds - Ice Cube",
   "Spiderman",
   "Final Destination Bloodlines",
   "Bed Rest",
