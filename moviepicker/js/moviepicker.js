@@ -236,6 +236,8 @@ const movies = [
   "Mi Año en Oxford",
   "Terrifier 3",
   "Fear",
+  "Nosferatu",
+  "The Cable Guy",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
