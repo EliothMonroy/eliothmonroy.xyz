@@ -40,7 +40,6 @@ const movies = [
   "Liar Liar",
   "El rey leon",
   "Tijuana",
-  "Sucession",
   "3096 days",
   "El huesped",
   "End of days",
