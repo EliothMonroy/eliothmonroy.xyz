@@ -198,7 +198,6 @@ const movies = [
   "Lost S2",
   "Mickey 17",
   "Hostel 3",
-  "A Haunting in Venice",
   "The Assessment",
   "The Accountant",
   "Presence",
