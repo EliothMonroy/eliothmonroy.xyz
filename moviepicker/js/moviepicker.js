@@ -236,6 +236,11 @@ const movies = [
   "Fear",
   "Nosferatu",
   "The Cable Guy",
+  // https://www.space.com/alien-movies-in-order
+  "Alien vs Predator",
+  "The Conjuring",
+  "A Sacrifice",
+  "J. Edgar",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
