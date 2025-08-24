@@ -98,7 +98,6 @@ const movies = [
   "Godzilla Minus One",
   "Chuky",
   "Estación Zombie Busan Train 2",
-  "Wedding Crashers",
   "Dumb and Dumber 2",
   "Sausage Party: Foodtopia",
   "Circus Du Soleil: Without a net",
