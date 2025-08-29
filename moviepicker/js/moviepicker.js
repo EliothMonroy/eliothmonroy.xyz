@@ -239,6 +239,9 @@ const movies = [
   "A Sacrifice",
   "J. Edgar",
   "Borderland",
+  "Thunderbolts",
+  "The Monkey",
+  "Trapped",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
