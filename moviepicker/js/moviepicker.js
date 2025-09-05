@@ -235,7 +235,6 @@ const movies = [
   "The Cable Guy",
   // https://www.space.com/alien-movies-in-order
   "Alien vs Predator",
-  "The Conjuring",
   "A Sacrifice",
   "J. Edgar",
   "Borderland",
