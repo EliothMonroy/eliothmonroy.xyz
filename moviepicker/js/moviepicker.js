@@ -241,6 +241,15 @@ const movies = [
   "Thunderbolts",
   "The Monkey",
   "Trapped",
+  "Anora",
+  "Babel",
+  "Danny the Dog",
+  "Estación Fantasma",
+  "Gone Girl",
+  "Mirrors",
+  "Kiss the Girls",
+  "Malice",
+  "The Domestics",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
