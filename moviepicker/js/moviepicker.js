@@ -239,7 +239,6 @@ const movies = [
   "J. Edgar",
   "Borderland",
   "Thunderbolts",
-  "The Monkey",
   "Trapped",
   "Anora",
   "Babel",
