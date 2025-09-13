@@ -199,7 +199,6 @@ const movies = [
   "The Assessment",
   "The Accountant",
   "Presence",
-  "The Better Sister",
   "A Working Man",
   "Aprender a Soltar",
   "Prisioners",
@@ -249,6 +248,8 @@ const movies = [
   "Kiss the Girls",
   "Malice",
   "The Domestics",
+  "La Novia",
+  "BlacKkKlansman",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
