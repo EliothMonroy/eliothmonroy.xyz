@@ -160,7 +160,6 @@ const movies = [
   "Songbird",
   "Safer at Home",
   "The Lord Of The Rings: The War Of The Rohirrim",
-  "The Last House Left",
   "Thomas Müller - One of a Kind",
   "The Apprentice",
   "Renfield",
