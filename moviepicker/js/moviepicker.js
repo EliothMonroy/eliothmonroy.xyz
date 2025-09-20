@@ -249,6 +249,9 @@ const movies = [
   "The Domestics",
   "La Novia",
   "BlacKkKlansman",
+  "Little Children",
+  "That's My Boy",
+  "Texas Chainsaw 3D",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
