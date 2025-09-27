@@ -126,7 +126,6 @@ const movies = [
   "Vidas Pasadas",
   "Toradora!",
   "Kimi ni Todoke",
-  "Cloverfield Paradox",
   "Dandadan",
   "La bóveda",
   "El viento",
@@ -220,7 +219,6 @@ const movies = [
   "Feardotcom",
   "Spirit in the Blood",
   "The Front Room",
-  "Until Dawn",
   "Spiderman",
   "Final Destination Bloodlines",
   "Bed Rest",
@@ -251,6 +249,9 @@ const movies = [
   "Little Children",
   "That's My Boy",
   "Texas Chainsaw 3D",
+  "Materialists",
+  "The Brutalist",
+  "Wolfman",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
