@@ -252,6 +252,7 @@ const movies = [
   "Materialists",
   "The Brutalist",
   "Wolfman",
+  "Task",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
