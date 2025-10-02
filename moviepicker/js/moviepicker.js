@@ -244,7 +244,6 @@ const movies = [
   "Kiss the Girls",
   "Malice",
   "The Domestics",
-  "La Novia",
   "BlacKkKlansman",
   "Little Children",
   "That's My Boy",
