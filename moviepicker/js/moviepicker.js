@@ -252,6 +252,13 @@ const movies = [
   "The Brutalist",
   "Wolfman",
   "Task",
+  "Blade",
+  "The Departed",
+  "El Amuleto",
+  "The Man in My Basement",
+  "28 Years Later",
+  "Y2K",
+  "Steve",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
