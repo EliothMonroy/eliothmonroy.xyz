@@ -249,7 +249,6 @@ const movies = [
   "Texas Chainsaw 3D",
   "Materialists",
   "The Brutalist",
-  "Wolfman",
   "Task",
   "Blade",
   "The Departed",
