@@ -257,6 +257,7 @@ const movies = [
   "28 Years Later",
   "Y2K",
   "Steve",
+  "Stigmatized Properties",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
