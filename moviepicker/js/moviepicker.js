@@ -254,7 +254,6 @@ const movies = [
   "The Departed",
   "El Amuleto",
   "The Man in My Basement",
-  "28 Years Later",
   "Y2K",
   "Steve",
   "Stigmatized Properties",
