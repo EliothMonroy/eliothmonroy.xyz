@@ -201,7 +201,6 @@ const movies = [
   "Big Daddy",
   "Retrato de un amor a ciegas",
   "La maldición de Hill House",
-  "Pearl",
   "El Joven Manos de Tijera",
   "Them The Scare",
   "X",
