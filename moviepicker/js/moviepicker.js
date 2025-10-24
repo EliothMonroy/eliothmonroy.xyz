@@ -254,6 +254,10 @@ const movies = [
   "Stigmatized Properties",
   "Mickey's Mouse Trap",
   "The Chair Company",
+  "Eraser",
+  "Demolition Man",
+  "El Elixir de la Inmortalidad",
+  "All Fun and Games",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
