@@ -258,6 +258,7 @@ const movies = [
   "The Closet",
   "Come True",
   "Jingle All the Way",
+  "Frankenstein",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
