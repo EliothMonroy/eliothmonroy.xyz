@@ -261,6 +261,8 @@ const movies = [
   "Frankenstein",
   "The Wedding Singer",
   "Shutter Island",
+  "The Seduction",
+  "Kpop netflix",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
