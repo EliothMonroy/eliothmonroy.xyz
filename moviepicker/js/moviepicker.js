@@ -261,6 +261,10 @@ const movies = [
   "Shutter Island",
   "The Seduction",
   "Kpop netflix",
+  "The Brothers Grimm",
+  "Night Swim",
+  "The First Purge",
+  "The Hand That Rocks the Cradle",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
