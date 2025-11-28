@@ -265,6 +265,8 @@ const movies = [
   "Night Swim",
   "The First Purge",
   "The Hand That Rocks the Cradle",
+  "Tinker Tailor Soldier Spy",
+  "The Master",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
