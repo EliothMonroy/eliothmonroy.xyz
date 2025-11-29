@@ -201,7 +201,6 @@ const movies = [
   "Them The Scare",
   "X",
   "Elevation",
-  "Wicked",
   "Call me by your name",
   "Belzebuth",
   "Siete días y una vida",
