@@ -266,6 +266,8 @@ const movies = [
   "The Hand That Rocks the Cradle",
   "Tinker Tailor Soldier Spy",
   "The Master",
+  "Plan 75",
+  "Hansel & Gretel: Witch Hunters",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
