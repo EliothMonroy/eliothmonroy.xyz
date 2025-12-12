@@ -268,6 +268,9 @@ const movies = [
   "The Master",
   "Plan 75",
   "Hansel & Gretel: Witch Hunters",
+  "Shaman",
+  "The Eras Tour | Miniseries",
+  "The Eras Tour | The Final Show",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
