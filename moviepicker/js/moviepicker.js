@@ -271,6 +271,9 @@ const movies = [
   "Shaman",
   "The Eras Tour | Miniseries",
   "The Eras Tour | The Final Show",
+  "Dragon Ball Daima",
+  "One Battle After Another",
+  "The Jester",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
