@@ -188,7 +188,6 @@ const movies = [
   "Hostel 3",
   "The Assessment",
   "The Accountant",
-  "Presence",
   "A Working Man",
   "Aprender a Soltar",
   "Prisioners",
@@ -274,6 +273,8 @@ const movies = [
   "Dragon Ball Daima",
   "One Battle After Another",
   "The Jester",
+  "All Her Fault",
+  "Sputnik",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
