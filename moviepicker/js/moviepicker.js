@@ -273,8 +273,8 @@ const movies = [
   "Dragon Ball Daima",
   "One Battle After Another",
   "The Jester",
-  "All Her Fault",
   "Sputnik",
+  "Severance",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
