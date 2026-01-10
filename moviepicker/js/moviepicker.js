@@ -214,7 +214,6 @@ const movies = [
   "The Naked Gun",
   "Mi Año en Oxford",
   "Terrifier 3",
-  "Fear",
   "Nosferatu",
   "The Cable Guy",
   // https://www.space.com/alien-movies-in-order
@@ -224,7 +223,6 @@ const movies = [
   "Borderland",
   "Thunderbolts",
   "Trapped",
-  "Babel",
   "Danny the Dog",
   "Estación Fantasma",
   "Gone Girl",
@@ -272,9 +270,14 @@ const movies = [
   "The Eras Tour | The Final Show",
   "Dragon Ball Daima",
   "One Battle After Another",
-  "The Jester",
   "Sputnik",
   "Severance",
+  "Diario de una pasión",
+  "Lady Chatterley's Lover",
+  "Revolutionary Road",
+  "National Lampoon's Christmas Vacation",
+  "Just Friends",
+  "La Duquesa",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
