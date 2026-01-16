@@ -278,6 +278,11 @@ const movies = [
   "National Lampoon's Christmas Vacation",
   "Just Friends",
   "La Duquesa",
+  "Posthouse",
+  "Beneath",
+  "The Night Manager",
+  "Twins",
+  "DodgeBall: A True Underdog Story",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
