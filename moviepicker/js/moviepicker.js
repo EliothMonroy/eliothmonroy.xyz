@@ -283,6 +283,8 @@ const movies = [
   "The Night Manager",
   "Twins",
   "DodgeBall: A True Underdog Story",
+  "Europhia",
+  "Aguas Profundas",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
