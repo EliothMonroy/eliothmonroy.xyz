@@ -271,7 +271,6 @@ const movies = [
   "Dragon Ball Daima",
   "One Battle After Another",
   "Sputnik",
-  "Severance",
   "Diario de una pasión",
   "Lady Chatterley's Lover",
   "Revolutionary Road",
@@ -285,6 +284,7 @@ const movies = [
   "DodgeBall: A True Underdog Story",
   "Europhia",
   "Aguas Profundas",
+  "The Rip",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
