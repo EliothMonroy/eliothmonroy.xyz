@@ -285,6 +285,12 @@ const movies = [
   "Europhia",
   "Aguas Profundas",
   "The Rip",
+  "The Ring",
+  "Preparation for the Next Life ",
+  "The Darwin Incident",
+  "Atonement",
+  "The Beldham",
+  "Death of a Unicorn",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
