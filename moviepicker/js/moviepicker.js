@@ -291,6 +291,7 @@ const movies = [
   "Atonement",
   "The Beldham",
   "Death of a Unicorn",
+  "Párvulos: Children of the Apocalypse",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
