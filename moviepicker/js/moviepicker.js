@@ -181,7 +181,6 @@ const movies = [
   "Mildred Pierce",
   "Lazarus",
   "Como Ganar Millones antes de que la abuela muera",
-  "Extraterritorial",
   "La Partida de Go",
   "Lost S2",
   "Mickey 17",
