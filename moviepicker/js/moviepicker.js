@@ -294,6 +294,7 @@ const movies = [
   "The Lighthouse",
   "Searching",
   "M3GAN 2.0",
+  "Battle for Happiness",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
