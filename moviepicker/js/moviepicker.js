@@ -153,7 +153,6 @@ const movies = [
   "The Lord Of The Rings: The War Of The Rohirrim",
   "Thomas Müller - One of a Kind",
   "The Apprentice",
-  "Renfield",
   "NICKEL BOYS",
   "The Book of Eli",
   "The Gallows",
@@ -292,7 +291,6 @@ const movies = [
   "Death of a Unicorn",
   "Párvulos: Children of the Apocalypse",
   "The Lighthouse",
-  "Searching",
   "M3GAN 2.0",
   "Battle for Happiness",
 ];
