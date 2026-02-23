@@ -293,6 +293,7 @@ const movies = [
   "The Lighthouse",
   "M3GAN 2.0",
   "Battle for Happiness",
+  "56 Days",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
