@@ -294,6 +294,10 @@ const movies = [
   "M3GAN 2.0",
   "Battle for Happiness",
   "56 Days",
+  "Sweetpea",
+  "Silent Night, Deadly Night",
+  "The Texas Chainsaw Massacre: The Beginning",
+  "Resurrected",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
