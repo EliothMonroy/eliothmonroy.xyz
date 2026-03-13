@@ -297,6 +297,7 @@ const movies = [
   "Silent Night, Deadly Night",
   "The Texas Chainsaw Massacre: The Beginning",
   "Resurrected",
+  "Dagr",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
