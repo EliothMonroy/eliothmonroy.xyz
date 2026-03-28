@@ -298,6 +298,12 @@ const movies = [
   "The Texas Chainsaw Massacre: The Beginning",
   "Resurrected",
   "Dagr",
+  "Siren's Kiss",
+  "Pretty Lethal",
+  "Imperfect Women",
+  "Something Very Bad Is Going to Happen",
+  "The Silent Noise",
+  "Anaconda",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
