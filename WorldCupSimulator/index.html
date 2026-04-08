@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA World Cup 2026 Simulator</title>
+  <style>
+    /* ── Reset & Base ────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0a1628;
+      color: #e8eaf0;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #1565c0 100%);
+      padding: 20px 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,.5);
+    }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+      color: #fff;
+    }
+    header p.subtitle {
+      font-size: .85rem;
+      color: #90caf9;
+      margin-top: 2px;
+    }
+    header .byline {
+      color: #64b5f6;
+      font-weight: 600;
+    }
+
+    /* ── Tabs ───────────────────────────────────────────────── */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-top: 16px;
+    }
+    .tab-btn {
+      padding: 10px 22px;
+      border: none;
+      background: rgba(255,255,255,.1);
+      color: #90caf9;
+      cursor: pointer;
+      border-radius: 6px 6px 0 0;
+      font-size: .9rem;
+      font-weight: 600;
+      transition: background .15s;
+    }
+    .tab-btn:hover { background: rgba(255,255,255,.18); }
+    .tab-btn.active { background: #0a1628; color: #fff; }
+
+    /* ── Control Bar ────────────────────────────────────────── */
+    .control-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 14px 24px;
+      background: #111d35;
+      border-bottom: 1px solid #1e2d4a;
+    }
+    .btn {
+      padding: 8px 18px;
+      border: none;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity .15s, transform .1s;
+    }
+    .btn:hover:not(:disabled) { opacity: .88; transform: translateY(-1px); }
+    .btn:disabled { opacity: .35; cursor: not-allowed; }
+    .btn-primary   { background: #1976d2; color: #fff; }
+    .btn-success   { background: #2e7d32; color: #fff; }
+    .btn-danger    { background: #b71c1c; color: #fff; }
+    .btn-secondary { background: #37474f; color: #cfd8dc; }
+
+    /* ── Main Content ───────────────────────────────────────── */
+    main { padding: 20px 24px; }
+
+    /* ── Champion Banner ────────────────────────────────────── */
+    .champion-banner {
+      background: linear-gradient(135deg, #f9a825, #ffd54f);
+      color: #1a1a00;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    /* ── Groups Grid ────────────────────────────────────────── */
+    .groups-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+
+    .group-card {
+      background: #111d35;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #1e2d4a;
+    }
+    .group-card-header {
+      background: #162040;
+      padding: 10px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #64b5f6;
+      letter-spacing: 1px;
+    }
+
+    /* ── Standings Table ────────────────────────────────────── */
+    .standings-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .8rem;
+    }
+    .standings-table th {
+      background: #0d1a30;
+      color: #78909c;
+      padding: 6px 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .standings-table th:first-child { text-align: left; padding-left: 12px; }
+    .standings-table td {
+      padding: 6px 8px;
+      text-align: center;
+      border-top: 1px solid #1a2740;
+    }
+    .standings-table td:first-child { text-align: left; padding-left: 12px; }
+    .standings-table tr.qualified-1 { background: rgba(30,136,229,.18); }
+    .standings-table tr.qualified-2 { background: rgba(30,136,229,.10); }
+    .standings-table tr.qualified-3rd { background: rgba(255,193,7,.08); }
+    .standings-table td.pts { font-weight: 700; color: #fff; }
+    .badge {
+      display: inline-block;
+      font-size: .65rem;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-left: 5px;
+      vertical-align: middle;
+      font-weight: 700;
+    }
+    .badge-q  { background: #1565c0; color: #fff; }
+    .badge-q3 { background: #f57f17; color: #fff; }
+
+    /* ── Matches List ───────────────────────────────────────── */
+    .matches-list { padding: 4px 12px 12px; }
+    .matchday-header {
+      font-size: .68rem;
+      font-weight: 700;
+      color: #546e7a;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 0 3px;
+      border-top: 1px solid #1a2740;
+      margin-top: 2px;
+    }
+    .matchday-header:first-child { border-top: none; margin-top: 0; }
+    .match-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      border-top: 1px solid #1a2740;
+      font-size: .82rem;
+    }
+    .match-row:first-child { border-top: none; }
+    .match-team { flex: 1; }
+    .match-team.away { text-align: right; }
+    .score-result {
+      min-width: 60px;
+      text-align: center;
+      font-weight: 700;
+      color: #e3f2fd;
+    }
+    .score-inputs {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .score-inputs input {
+      width: 36px;
+      text-align: center;
+      background: #0d1a30;
+      border: 1px solid #2a3f60;
+      border-radius: 4px;
+      color: #fff;
+      padding: 3px 4px;
+      font-size: .82rem;
+    }
+    .score-inputs input:focus { outline: none; border-color: #1976d2; }
+    .score-sep { color: #546e7a; font-size: .9rem; }
+    .btn-xs {
+      padding: 3px 8px;
+      font-size: .72rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: opacity .15s;
+    }
+    .btn-xs:hover { opacity: .82; }
+    .team-flag { margin-right: 5px; font-style: normal; }
+
+    .btn-confirm { background: #1976d2; color: #fff; }
+    .btn-sim     { background: #37474f; color: #cfd8dc; }
+    .btn-edit    { background: #4a3728; color: #ffb74d; }
+    .btn-share   { background: linear-gradient(135deg, #6a1b9a, #8e24aa); color: #fff; }
+
+    /* ── Knockout View ──────────────────────────────────────── */
+    .knockout-view {
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+    .bracket {
+      display: flex;
+      gap: 0;
+      min-width: 1100px;
+      align-items: flex-start;
+    }
+    .bracket-round {
+      flex: 1;
+      min-width: 160px;
+    }
+    .round-header {
+      text-align: center;
+      font-size: .75rem;
+      font-weight: 700;
+      color: #64b5f6;
+      letter-spacing: .5px;
+      padding: 8px 4px 12px;
+      text-transform: uppercase;
+    }
+    .bracket-matches {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .bracket-match-wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .bracket-match {
+      flex: 1;
+      margin: 4px 4px;
+      background: #111d35;
+      border: 1px solid #1e2d4a;
+      border-radius: 7px;
+      overflow: hidden;
+      font-size: .78rem;
+    }
+    .bracket-match.pending-teams {
+      opacity: .45;
+    }
+    .bracket-match-label {
+      font-size: .65rem;
+      color: #546e7a;
+      padding: 2px 9px 0;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    .bracket-team {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 9px;
+      gap: 6px;
+    }
+    .bracket-team + .bracket-team {
+      border-top: 1px solid #1a2740;
+    }
+    .bracket-team-name {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+    .bracket-team-score {
+      font-weight: 700;
+      color: #fff;
+      min-width: 14px;
+      text-align: right;
+    }
+    .bracket-team.winner .bracket-team-name,
+    .bracket-team.winner .bracket-team-score {
+      color: #ffd54f;
+    }
+    .bracket-match-actions {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      padding: 4px 8px 6px;
+      border-top: 1px solid #1a2740;
+      background: #0d1a2e;
+    }
+    .bracket-match-actions input {
+      width: 32px;
+      text-align: center;
+      background: #0a1628;
+      border: 1px solid #2a3f60;
+      border-radius: 4px;
+      color: #fff;
+      padding: 2px 3px;
+      font-size: .72rem;
+    }
+    .bracket-match-actions input:focus { outline: none; border-color: #1976d2; }
+    .pens-note {
+      text-align: center;
+      font-size: .7rem;
+      color: #ffa726;
+      padding: 2px 8px 4px;
+      background: #0d1a2e;
+    }
+
+    /* Third place + final side by side */
+    .final-section {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .final-section .bracket-round { flex: 1; }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      main { padding: 12px; }
+      .groups-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- Header -->
+  <header>
+    <h1>⚽ FIFA World Cup 2026 Simulator</h1>
+    <p class="subtitle">48 teams · 12 groups · Full knockout bracket · <span class="byline">by @EliothMonroy</span></p>
+    <div class="tabs">
+      <button class="tab-btn" :class="{ active: activeTab === 'group' }"
+              @click="activeTab = 'group'">Group Stage</button>
+      <button class="tab-btn" :class="{ active: activeTab === 'knockout' }"
+              @click="activeTab = 'knockout'"
+              :disabled="state.phase !== 'knockout'">Knockout</button>
+    </div>
+  </header>
+
+  <!-- Control Bar -->
+  <div class="control-bar">
+    <button class="btn btn-primary" @click="simulateAll">
+      {{ state.phase === 'group' ? 'Simulate All Groups' : 'Simulate All Remaining' }}
+    </button>
+    <button class="btn btn-success"
+            :disabled="!allGroupsComplete || state.phase !== 'group'"
+            @click="advanceToKnockout">
+      Advance to Knockout →
+    </button>
+    <button class="btn btn-danger" @click="reset">Reset Tournament</button>
+    <button v-if="champion" class="btn btn-share" @click="downloadShareImage">📸 Share Result</button>
+    <span v-if="state.phase === 'group'" style="font-size:.8rem;color:#546e7a;align-self:center;">
+      {{ allGroupsComplete ? 'All groups complete — ready to advance' : 'Enter or simulate group results' }}
+    </span>
+  </div>
+
+  <main>
+
+    <!-- Champion Banner -->
+    <div v-if="champion" class="champion-banner">
+      🏆 World Cup Champion: {{ flag(champion) }} {{ champion }}
+    </div>
+
+    <!-- ── GROUP STAGE ──────────────────────────────────────── -->
+    <div v-show="activeTab === 'group'">
+      <div class="groups-grid">
+        <div class="group-card" v-for="key in groupKeys" :key="key">
+          <div class="group-card-header">GROUP {{ key }}</div>
+
+          <!-- Standings -->
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th>MP</th><th>W</th><th>D</th><th>L</th>
+                <th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(rec, idx) in standings[key]" :key="rec.team"
+                  :class="{
+                    'qualified-1': idx === 0,
+                    'qualified-2': idx === 1,
+                    'qualified-3rd': idx === 2 && isThirdQualified(rec.team)
+                  }">
+                <td>
+                  <span class="team-flag">{{ flag(rec.team) }}</span>{{ rec.team }}
+                  <span v-if="idx < 2" class="badge badge-q">Q</span>
+                  <span v-else-if="idx === 2 && isThirdQualified(rec.team)" class="badge badge-q3">Q3</span>
+                </td>
+                <td>{{ rec.mp }}</td>
+                <td>{{ rec.w }}</td>
+                <td>{{ rec.d }}</td>
+                <td>{{ rec.l }}</td>
+                <td>{{ rec.gf }}</td>
+                <td>{{ rec.ga }}</td>
+                <td>{{ rec.gd >= 0 ? '+' + rec.gd : rec.gd }}</td>
+                <td class="pts">{{ rec.pts }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Matches -->
+          <div class="matches-list">
+            <template v-for="(match, idx) in state.groups[key].matches" :key="match.id">
+              <!-- Match day header: show when day changes -->
+              <div v-if="idx === 0 || match.matchDay !== state.groups[key].matches[idx-1].matchDay"
+                   class="matchday-header">Match Day {{ match.matchDay }}</div>
+            <div class="match-row">
+              <span class="match-team"><span class="team-flag">{{ flag(match.home) }}</span>{{ match.home }}</span>
+
+              <!-- Played result -->
+              <span v-if="match.played" class="score-result">
+                {{ match.homeScore }} – {{ match.awayScore }}
+                <button class="btn-xs btn-edit" @click="editGroupMatch(key, match.id)" title="Edit result">✎</button>
+              </span>
+
+              <!-- Score inputs -->
+              <div v-else class="score-inputs">
+                <input type="number" min="0" max="20"
+                       :value="getPending(match.id, 'home')"
+                       @input="setPending(match.id, 'home', $event.target.value)"
+                       @keyup.enter="confirmScore(key, match.id)" />
+                <span class="score-sep">–</span>
+                <input type="number" min="0" max="20"
+                       :value="getPending(match.id, 'away')"
+                       @input="setPending(match.id, 'away', $event.target.value)"
+                       @keyup.enter="confirmScore(key, match.id)" />
+                <button class="btn-xs btn-confirm" @click="confirmScore(key, match.id)">✓</button>
+                <button class="btn-xs btn-sim" @click="simulateGroupMatch(key, match.id)">Sim</button>
+              </div>
+
+              <span class="match-team away"><span class="team-flag">{{ flag(match.away) }}</span>{{ match.away }}</span>
+            </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── KNOCKOUT ─────────────────────────────────────────── -->
+    <div v-show="activeTab === 'knockout'" class="knockout-view">
+      <div v-if="state.phase !== 'knockout'" style="color:#546e7a;padding:40px;text-align:center;">
+        Complete the group stage and click "Advance to Knockout" to continue.
+      </div>
+
+      <div v-else>
+        <!-- Main bracket: R32 → R16 → QF → SF -->
+        <div class="bracket">
+          <div class="bracket-round" v-for="round in ['r32','r16','qf','sf']" :key="round">
+            <div class="round-header">{{ roundLabel(round) }}</div>
+            <div class="bracket-matches">
+              <div class="bracket-match-wrapper"
+                   v-for="(match, idx) in getRoundMatches(round)" :key="match.id">
+                <div class="bracket-match"
+                     :class="{ 'pending-teams': !match.home || !match.away }">
+
+                  <!-- Match label -->
+                  <div v-if="match.label" class="bracket-match-label">{{ match.label }}</div>
+
+                  <!-- Home team row -->
+                  <div class="bracket-team"
+                       :class="{ winner: match.played && match.winner === match.home }">
+                    <span class="bracket-team-name"><span v-if="match.home" class="team-flag">{{ flag(match.home) }}</span>{{ match.home || '—' }}</span>
+                    <span class="bracket-team-score" v-if="match.played">{{ match.homeScore }}</span>
+                  </div>
+
+                  <!-- Away team row -->
+                  <div class="bracket-team"
+                       :class="{ winner: match.played && match.winner === match.away }">
+                    <span class="bracket-team-name"><span v-if="match.away" class="team-flag">{{ flag(match.away) }}</span>{{ match.away || '—' }}</span>
+                    <span class="bracket-team-score" v-if="match.played">{{ match.awayScore }}</span>
+                  </div>
+
+                  <!-- Pens note -->
+                  <div v-if="match.played && match.resultType === 'pens'" class="pens-note">
+                    Pens: {{ match.homePens }}–{{ match.awayPens }}
+                  </div>
+                  <div v-else-if="match.played && match.resultType === 'aet'" class="pens-note">
+                    AET
+                  </div>
+
+                  <!-- Edit played result -->
+                  <div v-if="match.played" class="bracket-match-actions">
+                    <button class="btn-xs btn-edit" @click="editKnockoutMatch(round, idx)">✎ Edit</button>
+                  </div>
+
+                  <!-- Actions (unplayed + teams known) -->
+                  <div v-if="!match.played && match.home && match.away"
+                       class="bracket-match-actions">
+                    <input type="number" min="0" max="20"
+                           :value="getPending(match.id, 'home')"
+                           @input="setPending(match.id, 'home', $event.target.value)" />
+                    <span class="score-sep" style="color:#546e7a">–</span>
+                    <input type="number" min="0" max="20"
+                           :value="getPending(match.id, 'away')"
+                           @input="setPending(match.id, 'away', $event.target.value)" />
+                    <button class="btn-xs btn-confirm"
+                            @click="confirmKnockoutScore(round, idx)">✓</button>
+                    <button class="btn-xs btn-sim"
+                            @click="simulateKnockoutMatch(round, idx)">Sim</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Place + Final -->
+        <div class="final-section" style="margin-top:24px;">
+          <div class="bracket-round" v-for="round in ['tp','f']" :key="round">
+            <div class="round-header">{{ roundLabel(round) }}</div>
+            <div class="bracket-matches">
+              <div class="bracket-match-wrapper"
+                   v-for="(match, idx) in getRoundMatches(round)" :key="match.id">
+                <div class="bracket-match"
+                     :class="{ 'pending-teams': !match.home || !match.away }">
+
+                  <div class="bracket-team"
+                       :class="{ winner: match.played && match.winner === match.home }">
+                    <span class="bracket-team-name"><span v-if="match.home" class="team-flag">{{ flag(match.home) }}</span>{{ match.home || '—' }}</span>
+                    <span class="bracket-team-score" v-if="match.played">{{ match.homeScore }}</span>
+                  </div>
+                  <div class="bracket-team"
+                       :class="{ winner: match.played && match.winner === match.away }">
+                    <span class="bracket-team-name"><span v-if="match.away" class="team-flag">{{ flag(match.away) }}</span>{{ match.away || '—' }}</span>
+                    <span class="bracket-team-score" v-if="match.played">{{ match.awayScore }}</span>
+                  </div>
+
+                  <div v-if="match.played && match.resultType === 'pens'" class="pens-note">
+                    Pens: {{ match.homePens }}–{{ match.awayPens }}
+                  </div>
+                  <div v-else-if="match.played && match.resultType === 'aet'" class="pens-note">
+                    AET
+                  </div>
+
+                  <div v-if="match.played" class="bracket-match-actions">
+                    <button class="btn-xs btn-edit" @click="editKnockoutMatch(round, idx)">✎ Edit</button>
+                  </div>
+
+                  <div v-if="!match.played && match.home && match.away"
+                       class="bracket-match-actions">
+                    <input type="number" min="0" max="20"
+                           :value="getPending(match.id, 'home')"
+                           @input="setPending(match.id, 'home', $event.target.value)" />
+                    <span class="score-sep" style="color:#546e7a">–</span>
+                    <input type="number" min="0" max="20"
+                           :value="getPending(match.id, 'away')"
+                           @input="setPending(match.id, 'away', $event.target.value)" />
+                    <button class="btn-xs btn-confirm"
+                            @click="confirmKnockoutScore(round, idx)">✓</button>
+                    <button class="btn-xs btn-sim"
+                            @click="simulateKnockoutMatch(round, idx)">Sim</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── SHARE CARD (off-screen, captured by html2canvas) ──────────────── -->
+  <div v-if="champion" id="share-card" style="
+      position:fixed; left:-9999px; top:0;
+      width:820px;
+      background:#0a1628;
+      font-family:'Segoe UI',system-ui,sans-serif;
+      color:#e8eaf0;
+      overflow:hidden;
+      border-radius:12px;
+    ">
+
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#1a237e,#1565c0);padding:18px 28px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:22px;">⚽</span>
+      <div>
+        <div style="font-size:11px;color:#90caf9;letter-spacing:3px;font-weight:700;">FIFA WORLD CUP 2026</div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-top:1px;">Simulator Results</div>
+      </div>
+    </div>
+
+    <!-- Champion -->
+    <div style="background:linear-gradient(135deg,#f9a825,#ffd54f);padding:22px 28px;text-align:center;">
+      <div style="font-size:11px;font-weight:800;color:#5d4037;letter-spacing:3px;margin-bottom:6px;">🏆 WORLD CHAMPION</div>
+      <div style="font-size:38px;font-weight:900;color:#1a1200;line-height:1.1;">
+        {{ flag(champion) }}&nbsp;{{ champion.toUpperCase() }}
+      </div>
+    </div>
+
+    <!-- Bracket results -->
+    <div style="padding:22px 28px 8px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+      <!-- QF column -->
+      <div>
+        <div style="font-size:10px;font-weight:700;color:#64b5f6;letter-spacing:2px;margin-bottom:10px;border-bottom:1px solid #1e2d4a;padding-bottom:5px;">QUARTER-FINALS</div>
+        <div v-for="m in getRoundMatches('qf')" :key="m.id" style="margin-bottom:10px;">
+          <div :style="{ fontWeight: m.winner===m.home ? '700' : '400', color: m.winner===m.home ? '#fff' : '#90a4ae', fontSize:'12px' }">
+            {{ flag(m.home) }}&nbsp;{{ m.home }}&nbsp;<span style="color:#64b5f6">{{ m.homeScore }}</span>
+          </div>
+          <div :style="{ fontWeight: m.winner===m.away ? '700' : '400', color: m.winner===m.away ? '#fff' : '#90a4ae', fontSize:'12px', marginTop:'2px' }">
+            {{ flag(m.away) }}&nbsp;{{ m.away }}&nbsp;<span style="color:#64b5f6">{{ m.awayScore }}</span>
+          </div>
+          <div v-if="m.resultType==='pens'" style="font-size:10px;color:#ffa726;margin-top:2px;">Pens {{ m.homePens }}–{{ m.awayPens }}</div>
+          <div v-else-if="m.resultType==='aet'" style="font-size:10px;color:#ffa726;margin-top:2px;">AET</div>
+        </div>
+      </div>
+
+      <!-- SF column -->
+      <div>
+        <div style="font-size:10px;font-weight:700;color:#64b5f6;letter-spacing:2px;margin-bottom:10px;border-bottom:1px solid #1e2d4a;padding-bottom:5px;">SEMI-FINALS</div>
+        <div v-for="m in getRoundMatches('sf')" :key="m.id" style="margin-bottom:14px;">
+          <div :style="{ fontWeight: m.winner===m.home ? '700' : '400', color: m.winner===m.home ? '#fff' : '#90a4ae', fontSize:'12px' }">
+            {{ flag(m.home) }}&nbsp;{{ m.home }}&nbsp;<span style="color:#64b5f6">{{ m.homeScore }}</span>
+          </div>
+          <div :style="{ fontWeight: m.winner===m.away ? '700' : '400', color: m.winner===m.away ? '#fff' : '#90a4ae', fontSize:'12px', marginTop:'2px' }">
+            {{ flag(m.away) }}&nbsp;{{ m.away }}&nbsp;<span style="color:#64b5f6">{{ m.awayScore }}</span>
+          </div>
+          <div v-if="m.resultType==='pens'" style="font-size:10px;color:#ffa726;margin-top:2px;">Pens {{ m.homePens }}–{{ m.awayPens }}</div>
+          <div v-else-if="m.resultType==='aet'" style="font-size:10px;color:#ffa726;margin-top:2px;">AET</div>
+        </div>
+      </div>
+
+      <!-- Final column -->
+      <div>
+        <div style="font-size:10px;font-weight:700;color:#ffd54f;letter-spacing:2px;margin-bottom:10px;border-bottom:1px solid #2a3a1a;padding-bottom:5px;">FINAL</div>
+        <div v-for="m in getRoundMatches('f')" :key="m.id" style="margin-bottom:14px;">
+          <div :style="{ fontWeight: m.winner===m.home ? '700' : '400', color: m.winner===m.home ? '#ffd54f' : '#90a4ae', fontSize:'13px' }">
+            {{ flag(m.home) }}&nbsp;{{ m.home }}&nbsp;<span style="color:#64b5f6">{{ m.homeScore }}</span>
+          </div>
+          <div :style="{ fontWeight: m.winner===m.away ? '700' : '400', color: m.winner===m.away ? '#ffd54f' : '#90a4ae', fontSize:'13px', marginTop:'3px' }">
+            {{ flag(m.away) }}&nbsp;{{ m.away }}&nbsp;<span style="color:#64b5f6">{{ m.awayScore }}</span>
+          </div>
+          <div v-if="m.resultType==='pens'" style="font-size:10px;color:#ffa726;margin-top:2px;">Pens {{ m.homePens }}–{{ m.awayPens }}</div>
+          <div v-else-if="m.resultType==='aet'" style="font-size:10px;color:#ffa726;margin-top:2px;">AET</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Third place -->
+    <div style="margin:0 28px 20px;padding:10px 14px;background:#111d35;border-radius:7px;border:1px solid #1e2d4a;">
+      <div style="font-size:10px;font-weight:700;color:#78909c;letter-spacing:2px;margin-bottom:6px;">3RD PLACE</div>
+      <div style="display:flex;gap:20px;">
+        <div v-for="(side, key) in { home: getRoundMatches('tp')[0].home, away: getRoundMatches('tp')[0].away }" :key="key"
+             :style="{ fontWeight: getRoundMatches('tp')[0].winner===side ? '700':'400', color: getRoundMatches('tp')[0].winner===side ? '#fff':'#78909c', fontSize:'12px' }">
+          {{ flag(side) }}&nbsp;{{ side }}&nbsp;<span style="color:#64b5f6">{{ key==='home' ? getRoundMatches('tp')[0].homeScore : getRoundMatches('tp')[0].awayScore }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="background:#060f1e;padding:10px 28px;display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-size:10px;color:#2a3f60;letter-spacing:1px;">FIFA WORLD CUP 2026 SIMULATOR</span>
+      <span style="font-size:11px;font-weight:700;color:#4a7ab5;letter-spacing:.5px;">by @EliothMonroy</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
