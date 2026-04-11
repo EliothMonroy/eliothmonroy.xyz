@@ -305,6 +305,18 @@ const movies = [
   "The Silent Noise",
   "Anaconda",
   "28 Years Later: The Bone Temple",
+  "The Foreigner",
+  "The Void",
+  "47 Meters Down: Uncaged",
+  "Parker",
+  "Wild Card",
+  "Central Intelligence",
+  "Jack and Jill",
+  "Hostage Radio",
+  "Primal Fear",
+  "Finding Harry: The Craft Behind the Magic",
+  "Suspect Zero",
+  "Untold: Chess Mates",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
