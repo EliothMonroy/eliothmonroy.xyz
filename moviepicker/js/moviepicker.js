@@ -317,6 +317,11 @@ const movies = [
   "Finding Harry: The Craft Behind the Magic",
   "Suspect Zero",
   "Untold: Chess Mates",
+  "Wormtown",
+  "Operation Fortune: Ruse de Guerre",
+  "Rental Family",
+  "Bleeding Steel",
+  "Space Jam: A New Legacy",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
