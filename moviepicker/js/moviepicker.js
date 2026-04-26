@@ -322,6 +322,11 @@ const movies = [
   "Rental Family",
   "Bleeding Steel",
   "Space Jam: A New Legacy",
+  "The Staircase",
+  "Civil War",
+  "Anatema",
+  "Keep Watching",
+  "No Other Choice",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
