@@ -327,6 +327,11 @@ const movies = [
   "Anatema",
   "Keep Watching",
   "No Other Choice",
+  "Wuthering Heights",
+  "The Hunt",
+  "Ragdoll",
+  "Trust",
+  "Hangman",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
