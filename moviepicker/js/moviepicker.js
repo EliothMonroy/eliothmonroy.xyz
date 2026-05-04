@@ -212,7 +212,6 @@ const movies = [
   "The Naked Gun",
   "Mi Año en Oxford",
   "Terrifier 3",
-  "Nosferatu",
   "The Cable Guy",
   // https://www.space.com/alien-movies-in-order
   "Alien vs Predator",
