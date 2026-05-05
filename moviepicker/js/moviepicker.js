@@ -326,7 +326,6 @@ const movies = [
   "Anatema",
   "Keep Watching",
   "No Other Choice",
-  "Wuthering Heights",
   "The Hunt",
   "Ragdoll",
   "Trust",
