@@ -303,7 +303,6 @@ const movies = [
   "Something Very Bad Is Going to Happen",
   "The Silent Noise",
   "Anaconda",
-  "28 Years Later: The Bone Temple",
   "The Foreigner",
   "The Void",
   "47 Meters Down: Uncaged",
