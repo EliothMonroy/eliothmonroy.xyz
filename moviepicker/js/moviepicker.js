@@ -329,6 +329,14 @@ const movies = [
   "Ragdoll",
   "Trust",
   "Hangman",
+  "Mechanic: Resurrection",
+  "Finders Keepers",
+  "Mindhunters",
+  "We Need to Talk About Kevin",
+  "Freud's Last Session",
+  "Widow's Bay",
+  "The Hallow",
+  "The Descent: Part 2",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
