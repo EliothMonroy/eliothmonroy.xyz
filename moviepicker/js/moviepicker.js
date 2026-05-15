@@ -335,6 +335,11 @@ const movies = [
   "Widow's Bay",
   "The Hallow",
   "The Descent: Part 2",
+  "The Handmaid's Tale",
+  "Before I Wake",
+  "The Fan",
+  "The Winter Lake",
+  "HIM",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
