@@ -17,7 +17,6 @@ const movies = [
   "Evolution",
   "Bojack",
   "Desencanto simpsons",
-  "Dark",
   "Susurros del corazón",
   "Nausicaa",
   "Desaparecido",
