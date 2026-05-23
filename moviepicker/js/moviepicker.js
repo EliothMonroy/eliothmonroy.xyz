@@ -339,6 +339,10 @@ const movies = [
   "The Fan",
   "The Winter Lake",
   "HIM",
+  "Maximum Pleasure Guaranteed",
+  "Shirley",
+  "I See You",
+  "Dark Skies",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
