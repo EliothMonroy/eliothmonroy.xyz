@@ -176,7 +176,6 @@ const movies = [
   "Wrath of Man",
   "Faces in the Crowd",
   "Mildred Pierce",
-  "Lazarus",
   "Como Ganar Millones antes de que la abuela muera",
   "La Partida de Go",
   "Lost S2",
