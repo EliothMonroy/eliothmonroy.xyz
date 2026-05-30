@@ -342,6 +342,12 @@ const movies = [
   "I See You",
   "Dark Skies",
   "Keeper",
+  "Spider-Noir",
+  "World Without End",
+  "In the Cut",
+  "The Forever Purge",
+  "Black Phone 2",
+  "The Lord of the Rings: The War of the Rohirrim",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
