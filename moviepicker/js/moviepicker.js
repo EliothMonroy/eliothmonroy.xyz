@@ -346,7 +346,6 @@ const movies = [
   "World Without End",
   "In the Cut",
   "The Forever Purge",
-  "Black Phone 2",
   "The Lord of the Rings: The War of the Rohirrim",
 ];
 
