@@ -10,6 +10,11 @@ createApp({
     };
   },
 
+  created() {
+    // Non-reactive per-group standings cache: groupKey -> { fp, data }
+    this._standingsCache = new Map();
+  },
+
   computed: {
     groupKeys() {
       return Object.keys(this.state.groups);
@@ -22,7 +27,19 @@ createApp({
     standings() {
       const result = {};
       for (const key of this.groupKeys) {
-        result[key] = computeStandings(this.state.groups[key]);
+        const group = this.state.groups[key];
+        let fp = '';
+        for (const m of group.matches) {
+          fp += m.played ? `${m.homeScore},${m.awayScore}|` : '-|';
+        }
+        const cached = this._standingsCache.get(key);
+        if (cached && cached.fp === fp) {
+          result[key] = cached.data;
+        } else {
+          const data = computeStandings(group);
+          this._standingsCache.set(key, { fp, data });
+          result[key] = data;
+        }
       }
       return result;
     },

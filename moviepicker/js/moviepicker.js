@@ -292,7 +292,6 @@ const movies = [
   "The Texas Chainsaw Massacre: The Beginning",
   "Resurrected",
   "Dagr",
-  "Siren's Kiss",
   "Pretty Lethal",
   "Imperfect Women",
   "Something Very Bad Is Going to Happen",
@@ -347,6 +346,10 @@ const movies = [
   "In the Cut",
   "The Forever Purge",
   "The Lord of the Rings: The War of the Rohirrim",
+  "Rocky",
+  "The Oxford Murders",
+  "Cape Fear",
+  "Mexico 86",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
