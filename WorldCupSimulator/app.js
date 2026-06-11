@@ -335,11 +335,32 @@ createApp({
 
 // ─── Persistence ──────────────────────────────────────────────────────────────
 
+const SAVE_DEBOUNCE_MS = 300;
+let saveTimer = null;
+let pendingState = null;
+
 function saveState(state) {
-  try {
-    localStorage.setItem('wc2026_state', JSON.stringify(state));
-  } catch (e) { /* quota exceeded — ignore */ }
+  pendingState = state;
+  if (saveTimer !== null) return;
+  saveTimer = setTimeout(flushSave, SAVE_DEBOUNCE_MS);
 }
+
+function flushSave() {
+  if (saveTimer !== null) {
+    clearTimeout(saveTimer);
+    saveTimer = null;
+  }
+  if (pendingState === null) return;
+  try {
+    localStorage.setItem('wc2026_state', JSON.stringify(pendingState));
+  } catch (e) { /* quota exceeded — ignore */ }
+  pendingState = null;
+}
+
+// Flush pending save before the tab unloads so we don't lose the last action.
+// pagehide also fires on mobile when the tab is backgrounded — more reliable than beforeunload.
+window.addEventListener('beforeunload', flushSave);
+window.addEventListener('pagehide', flushSave);
 
 function loadState() {
   try {
