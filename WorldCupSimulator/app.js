@@ -299,6 +299,14 @@ createApp({
       const card = document.getElementById('share-card');
       if (!card) return;
 
+      let html2canvas;
+      try {
+        html2canvas = await loadHtml2Canvas();
+      } catch (e) {
+        alert('Could not load the screenshot library. Check your connection and try again.');
+        return;
+      }
+
       // Temporarily move on-screen so html2canvas can render it
       const prev = card.style.left;
       card.style.left = '0px';
@@ -332,6 +340,27 @@ createApp({
     },
   },
 }).mount('#app');
+
+// ─── Lazy-loaded html2canvas ─────────────────────────────────────────────────
+
+const HTML2CANVAS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+let html2canvasPromise = null;
+
+function loadHtml2Canvas() {
+  if (html2canvasPromise) return html2canvasPromise;
+  html2canvasPromise = new Promise((resolve, reject) => {
+    if (window.html2canvas) { resolve(window.html2canvas); return; }
+    const script = document.createElement('script');
+    script.src = HTML2CANVAS_URL;
+    script.onload = () => resolve(window.html2canvas);
+    script.onerror = () => {
+      html2canvasPromise = null; // allow retry on next click
+      reject(new Error('html2canvas failed to load'));
+    };
+    document.head.appendChild(script);
+  });
+  return html2canvasPromise;
+}
 
 // ─── Persistence ──────────────────────────────────────────────────────────────
 
