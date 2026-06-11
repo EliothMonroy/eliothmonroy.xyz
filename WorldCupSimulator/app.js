@@ -44,8 +44,8 @@ createApp({
       return result;
     },
     qualifiedThirds() {
-      if (!this.allGroupsComplete) return [];
-      return rankThirdPlace(this.state.groups).map(q => q.team);
+      if (!this.allGroupsComplete) return new Set();
+      return new Set(rankThirdPlace(this.standings).map(q => q.team));
     },
     champion() {
       return this.state.champion;
@@ -276,7 +276,7 @@ createApp({
     flag(team) { return getFlag(team); },
 
     isThirdQualified(team) {
-      return this.qualifiedThirds.includes(team);
+      return this.qualifiedThirds.has(team);
     },
 
     roundLabel(round) {

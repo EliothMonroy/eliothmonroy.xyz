@@ -175,20 +175,18 @@ function sortTeams(a, b, matches, allTeams) {
 
 // ─── Qualification ────────────────────────────────────────────────────────────
 
-function getQualifiers(groups) {
+function getQualifiers(standingsByGroup) {
   const qualifiers = [];
-  for (const [key, group] of Object.entries(groups)) {
-    const standings = computeStandings(group);
+  for (const [key, standings] of Object.entries(standingsByGroup)) {
     qualifiers.push({ group: key, rank: 1, team: standings[0].team, record: standings[0] });
     qualifiers.push({ group: key, rank: 2, team: standings[1].team, record: standings[1] });
   }
   return qualifiers;
 }
 
-function rankThirdPlace(groups) {
+function rankThirdPlace(standingsByGroup) {
   const thirds = [];
-  for (const [key, group] of Object.entries(groups)) {
-    const standings = computeStandings(group);
+  for (const [key, standings] of Object.entries(standingsByGroup)) {
     thirds.push({ group: key, rank: 3, team: standings[2].team, record: standings[2] });
   }
   thirds.sort((a, b) => {
@@ -250,8 +248,12 @@ function assignThirdPlaceTeams(top8thirds) {
 }
 
 function buildBracket(groups) {
-  const qual = getQualifiers(groups);
-  const top8thirds = rankThirdPlace(groups);
+  const standingsByGroup = {};
+  for (const [key, group] of Object.entries(groups)) {
+    standingsByGroup[key] = computeStandings(group);
+  }
+  const qual = getQualifiers(standingsByGroup);
+  const top8thirds = rankThirdPlace(standingsByGroup);
 
   const byGroup = {};
   for (const q of qual) {
@@ -401,4 +403,18 @@ function simulateKnockoutScore() {
     : (home > away ? 'home' : 'away');
 
   return { homeScore: home, awayScore: away, homePens, awayPens, winner, resultType };
+}
+
+// Node test runner support (no-op in browser)
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    FLAGS, GROUPS, MATCH_DAY_ORDER, THIRD_SLOT_GROUPS,
+    BRACKET_FEED, R32_TO_R16, R16_TO_QF, GOAL_WEIGHTS,
+    getFlag, generateMatches, buildInitialState,
+    computeStandings, getH2HRecord, sortTeams,
+    getQualifiers, rankThirdPlace,
+    makeMatch, assignThirdPlaceTeams, buildBracket,
+    getSFLoserFeed,
+    randomGoals, simulatePenalties, simulateGroupScore, simulateKnockoutScore,
+  };
 }
