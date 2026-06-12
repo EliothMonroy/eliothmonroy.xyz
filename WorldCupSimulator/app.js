@@ -318,7 +318,7 @@ createApp({
 
       try {
         const canvas = await html2canvas(card, {
-          scale: 2,
+          scale: 1.5,
           useCORS: true,
           backgroundColor: '#0a1628',
           logging: false,
