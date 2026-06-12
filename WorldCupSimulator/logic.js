@@ -1,6 +1,6 @@
 // ─── Flags ───────────────────────────────────────────────────────────────────
 
-const FLAGS = {
+const FLAGS = Object.freeze({
   'Mexico':                   '🇲🇽',
   'South Africa':             '🇿🇦',
   'South Korea':              '🇰🇷',
@@ -49,7 +49,7 @@ const FLAGS = {
   'Croatia':                  '🇭🇷',
   'Ghana':                    '🇬🇭',
   'Panama':                   '🇵🇦',
-};
+});
 
 function getFlag(team) {
   return FLAGS[team] || '';
@@ -57,7 +57,7 @@ function getFlag(team) {
 
 // ─── Team Data ───────────────────────────────────────────────────────────────
 
-const GROUPS = {
+const GROUPS = Object.freeze({
   A: ['Mexico', 'South Africa', 'South Korea', 'Czech Republic'],
   B: ['Canada', 'Bosnia and Herzegovina', 'Qatar', 'Switzerland'],
   C: ['Brazil', 'Morocco', 'Haiti', 'Scotland'],
@@ -70,21 +70,21 @@ const GROUPS = {
   J: ['Argentina', 'Algeria', 'Austria', 'Jordan'],
   K: ['Portugal', 'DR Congo', 'Uzbekistan', 'Colombia'],
   L: ['England', 'Croatia', 'Ghana', 'Panama'],
-};
+});
 
 const GROUP_KEYS = Object.freeze(Object.keys(GROUPS));
 
 // ─── State Initialization ─────────────────────────────────────────────────────
 
 // Official FIFA match order: MD1: 1v2, 3v4 | MD2: 1v3, 4v2 | MD3: 4v1, 2v3
-const MATCH_DAY_ORDER = [
+const MATCH_DAY_ORDER = Object.freeze([
   { day: 1, home: 0, away: 1 },
   { day: 1, home: 2, away: 3 },
   { day: 2, home: 0, away: 2 },
   { day: 2, home: 3, away: 1 },
   { day: 3, home: 3, away: 0 },
   { day: 3, home: 1, away: 2 },
-];
+]);
 
 function generateMatches(groupKey, teams) {
   return MATCH_DAY_ORDER.map(({ day, home, away }, idx) => ({
@@ -208,7 +208,7 @@ function makeMatch(id, home, away) {
 }
 
 // Official FIFA 2026 eligible source groups per 3rd-place slot
-const THIRD_SLOT_GROUPS = {
+const THIRD_SLOT_GROUPS = Object.freeze({
   M74: ['A','B','C','D','F'],
   M77: ['C','D','F','G','H'],
   M79: ['C','E','F','H','I'],
@@ -217,7 +217,7 @@ const THIRD_SLOT_GROUPS = {
   M82: ['A','E','H','I','J'],
   M85: ['E','F','G','I','J'],
   M87: ['D','E','I','J','L'],
-};
+});
 
 // Assign the 8 best 3rd-place teams to the 8 official slots via backtracking.
 // Tries most-constrained slots first to find a valid assignment faster.
@@ -309,7 +309,7 @@ function buildBracket(groups) {
 // Advance winner of a completed knockout match into the next round
 // R32 → R16 official FIFA 2026 feed (non-sequential)
 // R32 index → { r16 index, slot }
-const R32_TO_R16 = [
+const R32_TO_R16 = Object.freeze([
   { nextIdx: 1, slot: 'home' },  // R32[0]  W73 → M90 home
   { nextIdx: 0, slot: 'home' },  // R32[1]  W74 → M89 home
   { nextIdx: 1, slot: 'away' },  // R32[2]  W75 → M90 away
@@ -326,11 +326,11 @@ const R32_TO_R16 = [
   { nextIdx: 6, slot: 'home' },  // R32[13] W86 → M95 home
   { nextIdx: 7, slot: 'away' },  // R32[14] W87 → M96 away
   { nextIdx: 6, slot: 'away' },  // R32[15] W88 → M95 away
-];
+]);
 
 // R16 → QF official feed
 // M97=W89vsW90(R16[0,1]), M98=W93vsW94(R16[4,5]), M99=W91vsW92(R16[2,3]), M100=W95vsW96(R16[6,7])
-const R16_TO_QF = [
+const R16_TO_QF = Object.freeze([
   { nextIdx: 0, slot: 'home' },  // R16[0] W89 → M97 home
   { nextIdx: 0, slot: 'away' },  // R16[1] W90 → M97 away
   { nextIdx: 2, slot: 'home' },  // R16[2] W91 → M99 home
@@ -339,14 +339,14 @@ const R16_TO_QF = [
   { nextIdx: 1, slot: 'away' },  // R16[5] W94 → M98 away
   { nextIdx: 3, slot: 'home' },  // R16[6] W95 → M100 home
   { nextIdx: 3, slot: 'away' },  // R16[7] W96 → M100 away
-];
+]);
 
-const BRACKET_FEED = {
+const BRACKET_FEED = Object.freeze({
   r32: (i) => ({ nextRound: 'r16', ...R32_TO_R16[i] }),
   r16: (i) => ({ nextRound: 'qf',  ...R16_TO_QF[i] }),
   qf:  (i) => ({ nextRound: 'sf',  nextIdx: Math.floor(i / 2), slot: i % 2 === 0 ? 'home' : 'away' }),
   sf:  (i) => ({ nextRound: 'f',   nextIdx: 0,                  slot: i === 0 ? 'home' : 'away' }),
-};
+});
 
 // Third place: losers of SF feed into tp
 function getSFLoserFeed(sfIdx) {
@@ -355,7 +355,7 @@ function getSFLoserFeed(sfIdx) {
 
 // ─── Simulation ───────────────────────────────────────────────────────────────
 
-const GOAL_WEIGHTS = [0.317, 0.365, 0.210, 0.080, 0.023, 0.005];
+const GOAL_WEIGHTS = Object.freeze([0.317, 0.365, 0.210, 0.080, 0.023, 0.005]);
 
 function randomGoals() {
   const r = Math.random();
