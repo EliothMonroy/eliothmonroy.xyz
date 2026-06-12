@@ -180,7 +180,7 @@
     .matchday-header {
       font-size: .68rem;
       font-weight: 700;
-      color: #546e7a;
+      color: #78909c;
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 8px 0 3px;
@@ -221,7 +221,7 @@
       font-size: .82rem;
     }
     .score-inputs input:focus { outline: none; border-color: #1976d2; }
-    .score-sep { color: #546e7a; font-size: .9rem; }
+    .score-sep { color: #78909c; font-size: .9rem; }
     .btn-xs {
       padding: 3px 8px;
       font-size: .72rem;
@@ -287,7 +287,7 @@
     }
     .bracket-match-label {
       font-size: .65rem;
-      color: #546e7a;
+      color: #78909c;
       padding: 2px 9px 0;
       font-weight: 600;
       letter-spacing: .3px;
@@ -401,7 +401,7 @@
     </button>
     <button class="btn btn-danger" @click="reset">Reset Tournament</button>
     <button v-if="champion" class="btn btn-share" @click="downloadShareImage">📸 Share Result</button>
-    <span v-if="state.phase === 'group'" style="font-size:.8rem;color:#546e7a;align-self:center;">
+    <span v-if="state.phase === 'group'" style="font-size:.8rem;color:#78909c;align-self:center;">
       {{ allGroupsComplete ? 'All groups complete — ready to advance' : 'Enter or simulate group results' }}
     </span>
   </div>
@@ -488,7 +488,7 @@
 
     <!-- ── KNOCKOUT ─────────────────────────────────────────── -->
     <div v-show="activeTab === 'knockout'" class="knockout-view">
-      <div v-if="state.phase !== 'knockout'" style="color:#546e7a;padding:40px;text-align:center;">
+      <div v-if="state.phase !== 'knockout'" style="color:#78909c;padding:40px;text-align:center;">
         Complete the group stage and click "Advance to Knockout" to continue.
       </div>
 
@@ -539,7 +539,7 @@
                     <input type="number" min="0" max="20"
                            :value="getPending(match.id, 'home')"
                            @input="setPending(match.id, 'home', $event.target.value)" />
-                    <span class="score-sep" style="color:#546e7a">–</span>
+                    <span class="score-sep" style="color:#78909c">–</span>
                     <input type="number" min="0" max="20"
                            :value="getPending(match.id, 'away')"
                            @input="setPending(match.id, 'away', $event.target.value)" />
@@ -591,7 +591,7 @@
                     <input type="number" min="0" max="20"
                            :value="getPending(match.id, 'home')"
                            @input="setPending(match.id, 'home', $event.target.value)" />
-                    <span class="score-sep" style="color:#546e7a">–</span>
+                    <span class="score-sep" style="color:#78909c">–</span>
                     <input type="number" min="0" max="20"
                            :value="getPending(match.id, 'away')"
                            @input="setPending(match.id, 'away', $event.target.value)" />
@@ -612,7 +612,7 @@
   </main>
 
   <!-- ── SHARE CARD (off-screen, captured by html2canvas) ──────────────── -->
-  <div v-if="champion" id="share-card" style="
+  <div v-if="champion" id="share-card" aria-hidden="true" style="
       position:fixed; left:-9999px; top:0;
       width:820px;
       background:#0a1628;
