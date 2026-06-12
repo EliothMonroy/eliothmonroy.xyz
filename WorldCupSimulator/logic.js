@@ -72,6 +72,8 @@ const GROUPS = {
   L: ['England', 'Croatia', 'Ghana', 'Panama'],
 };
 
+const GROUP_KEYS = Object.freeze(Object.keys(GROUPS));
+
 // ─── State Initialization ─────────────────────────────────────────────────────
 
 // Official FIFA match order: MD1: 1v2, 3v4 | MD2: 1v3, 4v2 | MD3: 4v1, 2v3
@@ -408,7 +410,7 @@ function simulateKnockoutScore() {
 // Node test runner support (no-op in browser)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
-    FLAGS, GROUPS, MATCH_DAY_ORDER, THIRD_SLOT_GROUPS,
+    FLAGS, GROUPS, GROUP_KEYS, MATCH_DAY_ORDER, THIRD_SLOT_GROUPS,
     BRACKET_FEED, R32_TO_R16, R16_TO_QF, GOAL_WEIGHTS,
     getFlag, generateMatches, buildInitialState,
     computeStandings, getH2HRecord, sortTeams,

@@ -20,7 +20,9 @@ createApp({
 
   computed: {
     groupKeys() {
-      return Object.keys(this.state.groups);
+      // Static: group keys never change at runtime; avoids re-tracking
+      // state.groups as a reactive dependency every render.
+      return GROUP_KEYS;
     },
     allGroupsComplete() {
       return Object.values(this.state.groups).every(g =>
