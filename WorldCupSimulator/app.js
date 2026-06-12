@@ -5,7 +5,6 @@ createApp({
     return {
       state: loadState(),
       // Transient UI state (not persisted)
-      pendingScores: {},   // matchId -> { home: '', away: '' }
       activeTab: 'group',  // 'group' | 'knockout'
     };
   },
@@ -13,6 +12,10 @@ createApp({
   created() {
     // Non-reactive per-group standings cache: groupKey -> { fp, data }
     this._standingsCache = new Map();
+    // Non-reactive transient input buffer: matchId -> { home: '', away: '' }.
+    // Not in data() because input @value updates the DOM directly — no need to
+    // trigger Vue re-renders for every keystroke.
+    this._pendingScores = {};
   },
 
   computed: {
@@ -63,27 +66,25 @@ createApp({
     // ── Group stage ──────────────────────────────────────────────────────────
 
     getPending(matchId, side) {
-      if (!this.pendingScores[matchId]) {
-        this.pendingScores[matchId] = { home: '', away: '' };
-      }
-      return this.pendingScores[matchId][side];
+      const entry = this._pendingScores[matchId];
+      return entry ? entry[side] : '';
     },
 
     setPending(matchId, side, val) {
-      if (!this.pendingScores[matchId]) {
-        this.pendingScores[matchId] = { home: '', away: '' };
+      if (!this._pendingScores[matchId]) {
+        this._pendingScores[matchId] = { home: '', away: '' };
       }
-      this.pendingScores[matchId][side] = val;
+      this._pendingScores[matchId][side] = val;
     },
 
     confirmScore(groupKey, matchId) {
-      const p = this.pendingScores[matchId];
+      const p = this._pendingScores[matchId];
       if (!p || p.home === '' || p.away === '') return;
       const h = parseInt(p.home, 10);
       const a = parseInt(p.away, 10);
       if (isNaN(h) || isNaN(a) || h < 0 || a < 0) return;
       this.applyGroupScore(groupKey, matchId, h, a);
-      delete this.pendingScores[matchId];
+      delete this._pendingScores[matchId];
     },
 
     applyGroupScore(groupKey, matchId, h, a) {
@@ -97,7 +98,7 @@ createApp({
     editGroupMatch(groupKey, matchId) {
       const m = this.state.groups[groupKey].matches.find(x => x.id === matchId);
       if (!m) return;
-      this.pendingScores[matchId] = { home: String(m.homeScore), away: String(m.awayScore) };
+      this._pendingScores[matchId] = { home: String(m.homeScore), away: String(m.awayScore) };
       m.homeScore = null;
       m.awayScore = null;
       m.played = false;
@@ -134,7 +135,7 @@ createApp({
 
     confirmKnockoutScore(round, matchIdx) {
       const match = this.state.bracket[round][matchIdx];
-      const p = this.pendingScores[match.id];
+      const p = this._pendingScores[match.id];
       if (!p || p.home === '' || p.away === '') return;
       const h = parseInt(p.home, 10);
       const a = parseInt(p.away, 10);
@@ -147,7 +148,7 @@ createApp({
       } else {
         this.applyKnockoutScore(round, matchIdx, h, a, null, null, 'normal');
       }
-      delete this.pendingScores[match.id];
+      delete this._pendingScores[match.id];
     },
 
     applyKnockoutScore(round, matchIdx, h, a, hp, ap, resultType) {
@@ -189,7 +190,7 @@ createApp({
 
     editKnockoutMatch(round, matchIdx) {
       const match = this.state.bracket[round][matchIdx];
-      this.pendingScores[match.id] = {
+      this._pendingScores[match.id] = {
         home: String(match.homeScore),
         away: String(match.awayScore),
       };
@@ -335,7 +336,7 @@ createApp({
       if (!confirm('Reset the entire tournament? All progress will be lost.')) return;
       localStorage.removeItem('wc2026_state');
       this.state = buildInitialState();
-      this.pendingScores = {};
+      this._pendingScores = {};
       this.activeTab = 'group';
     },
   },
