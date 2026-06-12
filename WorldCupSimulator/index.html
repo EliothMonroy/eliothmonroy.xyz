@@ -143,9 +143,9 @@
       border-top: 1px solid #1a2740;
     }
     .standings-table td:first-child { text-align: left; padding-left: 12px; }
-    .standings-table tr.qualified-1 { background: rgba(30,136,229,.18); }
-    .standings-table tr.qualified-2 { background: rgba(30,136,229,.10); }
-    .standings-table tr.qualified-3rd { background: rgba(255,193,7,.08); }
+    .standings-table tbody tr:nth-child(1) { background: rgba(30,136,229,.18); }
+    .standings-table tbody tr:nth-child(2) { background: rgba(30,136,229,.10); }
+    .standings-table tbody tr.qualified-3rd { background: rgba(255,193,7,.08); }
     .standings-table td.pts { font-weight: 700; color: #fff; }
     .badge {
       display: inline-block;
@@ -339,6 +339,16 @@
     }
     .final-section .bracket-round { flex: 1; }
 
+    /* ── Share card team rows (used by html2canvas screenshot) ─── */
+    .share-team { font-size: 12px; font-weight: 400; color: #90a4ae; }
+    .share-team.winner { font-weight: 700; color: #fff; }
+    .share-team-away { margin-top: 2px; }
+    .share-team-final { font-size: 13px; }
+    .share-team-final.winner { color: #ffd54f; }
+    .share-team-final.share-team-away { margin-top: 3px; }
+    .share-team-tp { color: #78909c; }
+    .share-team-tp.winner { color: #fff; }
+
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 600px) {
       main { padding: 12px; }
@@ -404,11 +414,7 @@
             </thead>
             <tbody>
               <tr v-for="(rec, idx) in standings[key]" :key="rec.team"
-                  :class="{
-                    'qualified-1': idx === 0,
-                    'qualified-2': idx === 1,
-                    'qualified-3rd': idx === 2 && isThirdQualified(rec.team)
-                  }">
+                  :class="{ 'qualified-3rd': idx === 2 && isThirdQualified(rec.team) }">
                 <td>
                   <span class="team-flag">{{ flag(rec.team) }}</span>{{ rec.team }}
                   <span v-if="idx < 2" class="badge badge-q">Q</span>
@@ -624,10 +630,10 @@
       <div>
         <div style="font-size:10px;font-weight:700;color:#64b5f6;letter-spacing:2px;margin-bottom:10px;border-bottom:1px solid #1e2d4a;padding-bottom:5px;">QUARTER-FINALS</div>
         <div v-for="m in getRoundMatches('qf')" :key="m.id" style="margin-bottom:10px;">
-          <div :style="{ fontWeight: m.winner===m.home ? '700' : '400', color: m.winner===m.home ? '#fff' : '#90a4ae', fontSize:'12px' }">
+          <div class="share-team" :class="{ winner: m.winner === m.home }">
             {{ flag(m.home) }}&nbsp;{{ m.home }}&nbsp;<span style="color:#64b5f6">{{ m.homeScore }}</span>
           </div>
-          <div :style="{ fontWeight: m.winner===m.away ? '700' : '400', color: m.winner===m.away ? '#fff' : '#90a4ae', fontSize:'12px', marginTop:'2px' }">
+          <div class="share-team share-team-away" :class="{ winner: m.winner === m.away }">
             {{ flag(m.away) }}&nbsp;{{ m.away }}&nbsp;<span style="color:#64b5f6">{{ m.awayScore }}</span>
           </div>
           <div v-if="m.resultType==='pens'" style="font-size:10px;color:#ffa726;margin-top:2px;">Pens {{ m.homePens }}–{{ m.awayPens }}</div>
@@ -639,10 +645,10 @@
       <div>
         <div style="font-size:10px;font-weight:700;color:#64b5f6;letter-spacing:2px;margin-bottom:10px;border-bottom:1px solid #1e2d4a;padding-bottom:5px;">SEMI-FINALS</div>
         <div v-for="m in getRoundMatches('sf')" :key="m.id" style="margin-bottom:14px;">
-          <div :style="{ fontWeight: m.winner===m.home ? '700' : '400', color: m.winner===m.home ? '#fff' : '#90a4ae', fontSize:'12px' }">
+          <div class="share-team" :class="{ winner: m.winner === m.home }">
             {{ flag(m.home) }}&nbsp;{{ m.home }}&nbsp;<span style="color:#64b5f6">{{ m.homeScore }}</span>
           </div>
-          <div :style="{ fontWeight: m.winner===m.away ? '700' : '400', color: m.winner===m.away ? '#fff' : '#90a4ae', fontSize:'12px', marginTop:'2px' }">
+          <div class="share-team share-team-away" :class="{ winner: m.winner === m.away }">
             {{ flag(m.away) }}&nbsp;{{ m.away }}&nbsp;<span style="color:#64b5f6">{{ m.awayScore }}</span>
           </div>
           <div v-if="m.resultType==='pens'" style="font-size:10px;color:#ffa726;margin-top:2px;">Pens {{ m.homePens }}–{{ m.awayPens }}</div>
@@ -654,10 +660,10 @@
       <div>
         <div style="font-size:10px;font-weight:700;color:#ffd54f;letter-spacing:2px;margin-bottom:10px;border-bottom:1px solid #2a3a1a;padding-bottom:5px;">FINAL</div>
         <div v-for="m in getRoundMatches('f')" :key="m.id" style="margin-bottom:14px;">
-          <div :style="{ fontWeight: m.winner===m.home ? '700' : '400', color: m.winner===m.home ? '#ffd54f' : '#90a4ae', fontSize:'13px' }">
+          <div class="share-team share-team-final" :class="{ winner: m.winner === m.home }">
             {{ flag(m.home) }}&nbsp;{{ m.home }}&nbsp;<span style="color:#64b5f6">{{ m.homeScore }}</span>
           </div>
-          <div :style="{ fontWeight: m.winner===m.away ? '700' : '400', color: m.winner===m.away ? '#ffd54f' : '#90a4ae', fontSize:'13px', marginTop:'3px' }">
+          <div class="share-team share-team-final share-team-away" :class="{ winner: m.winner === m.away }">
             {{ flag(m.away) }}&nbsp;{{ m.away }}&nbsp;<span style="color:#64b5f6">{{ m.awayScore }}</span>
           </div>
           <div v-if="m.resultType==='pens'" style="font-size:10px;color:#ffa726;margin-top:2px;">Pens {{ m.homePens }}–{{ m.awayPens }}</div>
@@ -672,7 +678,8 @@
       <div style="font-size:10px;font-weight:700;color:#78909c;letter-spacing:2px;margin-bottom:6px;">3RD PLACE</div>
       <div style="display:flex;gap:20px;">
         <div v-for="(side, key) in { home: getRoundMatches('tp')[0].home, away: getRoundMatches('tp')[0].away }" :key="key"
-             :style="{ fontWeight: getRoundMatches('tp')[0].winner===side ? '700':'400', color: getRoundMatches('tp')[0].winner===side ? '#fff':'#78909c', fontSize:'12px' }">
+             class="share-team share-team-tp"
+             :class="{ winner: getRoundMatches('tp')[0].winner === side }">
           {{ flag(side) }}&nbsp;{{ side }}&nbsp;<span style="color:#64b5f6">{{ key==='home' ? getRoundMatches('tp')[0].homeScore : getRoundMatches('tp')[0].awayScore }}</span>
         </div>
       </div>
