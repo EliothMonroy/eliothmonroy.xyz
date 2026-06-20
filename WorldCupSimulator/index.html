@@ -417,7 +417,7 @@
     <div v-show="activeTab === 'group'">
       <div class="groups-grid">
         <div class="group-card" v-for="key in groupKeys" :key="key">
-          <div class="group-card-header" v-once>GROUP {{ key }}</div>
+          <div class="group-card-header">GROUP {{ key }}</div>
 
           <!-- Standings -->
           <table class="standings-table">
@@ -496,7 +496,7 @@
         <!-- Main bracket: R32 → R16 → QF → SF -->
         <div class="bracket">
           <div class="bracket-round" v-for="round in ['r32','r16','qf','sf']" :key="round">
-            <div class="round-header" v-once>{{ roundLabel(round) }}</div>
+            <div class="round-header">{{ roundLabel(round) }}</div>
             <div class="bracket-matches">
               <div class="bracket-match-wrapper"
                    v-for="(match, idx) in getRoundMatches(round)" :key="match.id">
@@ -504,7 +504,7 @@
                      :class="{ 'pending-teams': !match.home || !match.away }">
 
                   <!-- Match label -->
-                  <div v-once v-if="match.label" class="bracket-match-label">{{ match.label }}</div>
+                  <div v-if="match.label" class="bracket-match-label">{{ match.label }}</div>
 
                   <!-- Home team row -->
                   <div class="bracket-team"
@@ -557,7 +557,7 @@
         <!-- Third Place + Final -->
         <div class="final-section" style="margin-top:24px;">
           <div class="bracket-round" v-for="round in ['tp','f']" :key="round">
-            <div class="round-header" v-once>{{ roundLabel(round) }}</div>
+            <div class="round-header">{{ roundLabel(round) }}</div>
             <div class="bracket-matches">
               <div class="bracket-match-wrapper"
                    v-for="(match, idx) in getRoundMatches(round)" :key="match.id">
