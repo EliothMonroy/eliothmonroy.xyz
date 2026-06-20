@@ -351,6 +351,14 @@ const movies = [
   "Cape Fear",
   "Mexico 86",
   "They Will Kill You",
+  "Last Action Hero",
+  "The Hole in the Ground",
+  "The Vanished",
+  "I Will Find You",
+  "Birthrite",
+  "Sugar",
+  "Silencio",
+  "0.0 MHz",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
