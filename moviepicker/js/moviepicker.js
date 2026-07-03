@@ -359,6 +359,10 @@ const movies = [
   "Sugar",
   "Silencio",
   "0.0 MHz",
+  "The Mummy",
+  "Project Hail Mary",
+  "The Loyalty Game",
+  "The Wretched",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
