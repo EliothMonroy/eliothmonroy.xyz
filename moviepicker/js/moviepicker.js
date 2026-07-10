@@ -363,6 +363,7 @@ const movies = [
   "Project Hail Mary",
   "The Loyalty Game",
   "The Wretched",
+  "Troll Hunter",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
