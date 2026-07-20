@@ -364,6 +364,10 @@ const movies = [
   "The Loyalty Game",
   "The Wretched",
   "Troll Hunter",
+  "Hot Fuzz",
+  "Club Zero",
+  "The Last Boy Scout",
+  "Undertone",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
