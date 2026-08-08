@@ -368,6 +368,7 @@ const movies = [
   "Club Zero",
   "The Last Boy Scout",
   "Undertone",
+  "The Lighthouse",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
