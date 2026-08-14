@@ -369,6 +369,12 @@ const movies = [
   "The Last Boy Scout",
   "Undertone",
   "The Lighthouse",
+  "The Wild Robot",
+  "Don't Look Away",
+  "The Long Walk",
+  "Relic",
+  "The Ghost Station",
+  "Screamboat",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
