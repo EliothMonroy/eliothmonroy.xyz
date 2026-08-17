@@ -371,7 +371,6 @@ const movies = [
   "The Lighthouse",
   "The Wild Robot",
   "Don't Look Away",
-  "The Long Walk",
   "Relic",
   "The Ghost Station",
   "Screamboat",
