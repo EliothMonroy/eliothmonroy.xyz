@@ -374,6 +374,7 @@ const movies = [
   "Relic",
   "The Ghost Station",
   "Screamboat",
+  "HOKUM: LA MALDICIÓN DE LA BRUJA",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
