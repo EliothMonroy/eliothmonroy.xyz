@@ -365,7 +365,6 @@ const movies = [
   "The Wretched",
   "Troll Hunter",
   "Hot Fuzz",
-  "Club Zero",
   "The Last Boy Scout",
   "Undertone",
   "The Lighthouse",
@@ -375,6 +374,9 @@ const movies = [
   "The Ghost Station",
   "Screamboat",
   "HOKUM: LA MALDICIÓN DE LA BRUJA",
+  "Collateral Damage",
+  "The Strangers: Chapter 3",
+  "A Private Life",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
