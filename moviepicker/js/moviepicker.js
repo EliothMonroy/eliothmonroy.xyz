@@ -374,9 +374,13 @@ const movies = [
   "The Ghost Station",
   "Screamboat",
   "HOKUM: LA MALDICIÓN DE LA BRUJA",
-  "Collateral Damage",
   "The Strangers: Chapter 3",
   "A Private Life",
+  "The Shawshank Redemption",
+  "Dream Scenario",
+  "REPORTE DE UN ASESINO",
+  "The Texas Chainsaw Massacre",
+  "Small Things Like These",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
