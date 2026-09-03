@@ -1,0 +1,15 @@
+---
+description: Project context and Cursor-specific workflow for this GitHub Pages site
+alwaysApply: true
+---
+
+# eliothmonroy.xyz
+
+Follow `AGENTS.md` at the repo root. It is the source of truth for stack, layout, commands, and boundaries.
+
+## Cursor-specific
+
+- This is a static GitHub Pages site. There is no dev server or bundler. Preview by opening the HTML file or serving the repo root as static files.
+- After any UI, layout, routing, or client-state change, verify the flow in the browser. A screenshot is not enough; click through the changed path. Check other pages that share the same files.
+- World Cup Simulator tests: `node --test WorldCupSimulator/tests/logic.test.js`. Run them after changing `logic.js` or the test file.
+- Do not add `.cursor` config, frameworks, or a package manager unless asked.
