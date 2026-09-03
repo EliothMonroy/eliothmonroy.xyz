@@ -1,3 +1,262 @@
-body{
-	font-family: Arial;
+:root {
+  --bg: #0b0d10;
+  --text: #ece8e1;
+  --muted: #9a948b;
+  --accent: #c4a574;
+  --rule: rgba(196, 165, 116, 0.28);
+  --max: 42rem;
+  --sans: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: #e0c49a;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  padding: 0.4rem 0.7rem;
+  background: var(--bg);
+  color: var(--accent);
+  z-index: 1;
+}
+
+.skip:focus {
+  top: 0.75rem;
+}
+
+main {
+  width: min(var(--max), calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 4.5rem 0 5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.role {
+  margin: 0 0 1.35rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.pitch {
+  margin: 0 0 1.25rem;
+  max-width: 38rem;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  color: var(--muted);
+  column-gap: 0.15rem;
+}
+
+.contact a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact span {
+  margin: 0 0.45rem;
+}
+
+.name-break {
+  display: none;
+}
+
+section {
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+h2 {
+  margin: 0 0 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.job {
+  margin: 0 0 1.85rem;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.job-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.dates {
+  margin: 0;
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.title {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+}
+
+.job ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.job li {
+  margin: 0 0 0.45rem;
+}
+
+.job li:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group {
+  margin: 0 0 0.85rem;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group dt {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.skill-group dd {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
+
+  main {
+    width: 100%;
+    max-width: var(--max);
+    padding-top: max(2rem, env(safe-area-inset-top, 0px));
+    padding-right: max(1.15rem, env(safe-area-inset-right, 0px));
+    padding-bottom: max(3rem, env(safe-area-inset-bottom, 0px));
+    padding-left: max(1.15rem, env(safe-area-inset-left, 0px));
+  }
+
+  .name-break {
+    display: block;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 8.2vw, 2.05rem);
+    line-height: 1.2;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.12em;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .contact a {
+    min-height: 2.75rem;
+  }
+
+  .contact span {
+    display: none;
+  }
+
+  .job-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  section {
+    margin-top: 2.1rem;
+    padding-top: 1.25rem;
+  }
+
+  .job {
+    margin-bottom: 1.55rem;
+  }
 }

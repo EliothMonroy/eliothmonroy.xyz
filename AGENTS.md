@@ -1,6 +1,6 @@
 # eliothmonroy.xyz
 
-Personal static website hosted on GitHub Pages at `https://eliothmonroy.xyz` (`CNAME` is `eliothmonroy.xyz`). The homepage is still a placeholder; most real work lives in self-contained mini-apps.
+Personal static website hosted on GitHub Pages at `https://eliothmonroy.xyz` (`CNAME` is `eliothmonroy.xyz`). The homepage is an English resume-style page. Mini-apps live in their own folders.
 
 This file is the source of truth for coding agents. Cursor-specific notes live in `.cursor/rules/`.
 
@@ -16,7 +16,7 @@ Do not add a framework, bundler, or package manager unless the user asks.
 
 | Path | What it is |
 | --- | --- |
-| `index.html`, `styles/styles.css` | Homepage (under construction). `index.html` links `js/app.js`, which does not exist yet. |
+| `index.html`, `styles/styles.css` | Homepage: resume (vanilla HTML/CSS). Dark theme, mobile styles in the same CSS file. |
 | `cv/` | PDF resumes. Treat as binary assets; do not rewrite. |
 | `moviepicker/` | Vanilla random movie picker (`index.html`, `styles/`, `js/`). |
 | `gamepicker/` | Vanilla random game picker (`index.html`, `css/`, `js/`). |
