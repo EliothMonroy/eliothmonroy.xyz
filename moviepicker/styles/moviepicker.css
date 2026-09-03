@@ -1,24 +1,75 @@
+:root {
+  --bg: #0b0d10;
+  --text: #ece8e1;
+  --accent: #c4a574;
+  --sans: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  max-width: 70ch;
-  padding: 3em 1em;
-  margin: auto;
-  line-height: 1.75;
-  font-size: 1.25em;
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 3em 0 1em;
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
 }
 
-p,
-ul,
-ol {
-  margin-bottom: 2em;
-  color: #1d1d1d;
-  font-family: sans-serif;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding-top: max(2.5rem, env(safe-area-inset-top, 0px));
+  padding-right: max(1.15rem, env(safe-area-inset-right, 0px));
+  padding-bottom: max(2.5rem, env(safe-area-inset-bottom, 0px));
+  padding-left: max(1.15rem, env(safe-area-inset-left, 0px));
+}
+
+.label {
+  margin: 0 0 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+#moviePicked {
+  margin: 0;
+  font-size: clamp(1.85rem, 9vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+@media (min-width: 641px) {
+  main {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .label {
+    letter-spacing: 0.16em;
+  }
+
+  #moviePicked {
+    font-size: clamp(2.25rem, 4.5vw, 3.15rem);
+  }
 }
