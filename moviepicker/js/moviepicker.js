@@ -381,6 +381,13 @@ const movies = [
   "REPORTE DE UN ASESINO",
   "The Texas Chainsaw Massacre",
   "Small Things Like These",
+  "Run Rabbit Run",
+  "Frantic",
+  "Falling Down",
+  "Wrongfully Accused",
+  "The Farm",
+  "Wrong Turn",
+  "PURSUED",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
