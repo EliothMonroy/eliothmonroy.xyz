@@ -389,6 +389,7 @@ const movies = [
   "Wrong Turn",
   "PURSUED",
   "COPYCAT",
+  "El Juicio",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
