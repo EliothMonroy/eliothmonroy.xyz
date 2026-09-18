@@ -390,6 +390,10 @@ const movies = [
   "PURSUED",
   "COPYCAT",
   "El Juicio",
+  "The Campaign",
+  "The Turning",
+  "All the Money in the World",
+  "The Specialist",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
