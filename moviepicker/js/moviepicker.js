@@ -394,6 +394,7 @@ const movies = [
   "The Turning",
   "All the Money in the World",
   "The Specialist",
+  "Brothers",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
