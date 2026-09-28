@@ -230,7 +230,6 @@ const movies = [
   "Texas Chainsaw 3D",
   "Materialists",
   "The Brutalist",
-  "Task",
   "Blade",
   "The Departed",
   "El Amuleto",
