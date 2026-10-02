@@ -395,6 +395,12 @@ const movies = [
   "The Specialist",
   "Brothers",
   "La hipotesis del amor",
+  "The Strain",
+  "The Departed",
+  "Lethal Weapon",
+  "Hell Is Other People",
+  "Friday the 13th",
+  "Howl",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
