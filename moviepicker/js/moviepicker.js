@@ -388,7 +388,6 @@ const movies = [
   "Wrong Turn",
   "PURSUED",
   "COPYCAT",
-  "El Juicio",
   "The Campaign",
   "The Turning",
   "All the Money in the World",
@@ -401,6 +400,7 @@ const movies = [
   "Hell Is Other People",
   "Friday the 13th",
   "Howl",
+  "Evil Dead Burn",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
