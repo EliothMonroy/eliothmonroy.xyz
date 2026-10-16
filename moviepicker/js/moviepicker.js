@@ -401,6 +401,14 @@ const movies = [
   "Friday the 13th",
   "Howl",
   "Evil Dead Burn",
+  "Hellraiser",
+  "Slumdog Millionaire",
+  "The Dead Girl",
+  "The Alphabet Killer",
+  "No Me Sigas",
+  "Exposed",
+  "Sleep",
+  "Living Dark: The Story of Ted the Caver",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
