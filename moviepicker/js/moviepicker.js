@@ -409,6 +409,9 @@ const movies = [
   "Exposed",
   "Sleep",
   "Living Dark: The Story of Ted the Caver",
+  "Ouija",
+  "Ouija: Origin of Evil",
+  "Primate",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
