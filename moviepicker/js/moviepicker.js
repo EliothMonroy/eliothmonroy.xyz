@@ -412,6 +412,20 @@ const movies = [
   "Ouija",
   "Ouija: Origin of Evil",
   "Primate",
+  "Thir13en Ghosts",
+  "Dream House",
+  "Vacancy",
+  "Small Prophets",
+  "Los Hilos del Miedo",
+  "Feed",
+  "The Moment",
+  "Home Sweet Home: Rebirth",
+  "Baghead",
+  "Rosario",
+  "Consecration",
+  "My Best Friend's Dead",
+  "Found.",
+  "Sightless",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
