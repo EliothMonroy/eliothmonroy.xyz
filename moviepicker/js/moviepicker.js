@@ -426,6 +426,13 @@ const movies = [
   "My Best Friend's Dead",
   "Found.",
   "Sightless",
+  "Meet the Parents",
+  "Tropic Thunder",
+  "Sunshine",
+  "The Dilemma",
+  "Thanksgiving",
+  "The Wrong Daughter",
+  "Backrooms",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
