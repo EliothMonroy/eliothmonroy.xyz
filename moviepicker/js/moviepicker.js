@@ -433,6 +433,7 @@ const movies = [
   "Thanksgiving",
   "The Wrong Daughter",
   "Backrooms",
+  "Love Story",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
