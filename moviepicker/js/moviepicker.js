@@ -417,7 +417,6 @@ const movies = [
   "Vacancy",
   "Small Prophets",
   "Los Hilos del Miedo",
-  "Feed",
   "The Moment",
   "Home Sweet Home: Rebirth",
   "Baghead",
