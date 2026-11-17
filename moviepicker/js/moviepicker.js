@@ -435,7 +435,6 @@ const movies = [
   "Scream 7",
   "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
   "Mothers' Instinct",
-  "The End of Oak Street",
   "Nocturne",
 ];
 
