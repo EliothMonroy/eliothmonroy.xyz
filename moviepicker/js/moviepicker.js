@@ -436,6 +436,7 @@ const movies = [
   "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
   "Mothers' Instinct",
   "Nocturne",
+  "The Altruists",
 ];
 
 const random = Math.floor(Math.random() * movies.length);
